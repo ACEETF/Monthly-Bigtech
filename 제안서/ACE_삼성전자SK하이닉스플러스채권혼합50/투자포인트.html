@@ -239,6 +239,62 @@ table.m tr:last-child td{border-bottom:0}
 }
 .ud-up{background:var(--ace-sky-l);color:var(--ace-blue-d)}
 .ud-dn{background:#FDEFEE;color:#C0392B}
+/* 12p 국면 비교 그리드 — 3열(국면 / 막대 / 비율) 고정 정렬 */
+.ph-head,.ph{display:grid;grid-template-columns:268px 1fr 196px;align-items:center}
+.ph-head{
+  height:38px;background:#F4F6F8;border-bottom:1px solid var(--gray-line);
+  font-size:14.5px;font-weight:700;color:var(--ink-4);letter-spacing:-.03em;
+}
+.ph-head>div{padding:0 20px}
+.ph-head>div:first-child{border-right:1px solid var(--gray-line)}
+.ph-head>div:last-child{border-left:1px solid var(--gray-line);text-align:center}
+.ph-head span{font-weight:500;color:#9AA5B1}
+
+.ph{height:176px}
+.ph+.ph{border-top:1px solid var(--gray-line)}
+.ph-lab{
+  height:100%;padding:0 20px;border-right:1px solid var(--gray-line);
+  display:flex;flex-direction:column;justify-content:center;gap:5px;
+}
+.ph-tag{
+  align-self:flex-start;border-radius:5px;padding:4px 12px;
+  font-size:15px;font-weight:800;letter-spacing:-.03em;
+}
+.ph-up .ph-tag{background:var(--ace-sky-l);color:var(--ace-blue-d)}
+.ph-dn .ph-tag{background:#FDEFEE;color:#B93A2C}
+.ph-t{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.045em;white-space:nowrap}
+.ph-t b{font-weight:800}
+.ph-up .ph-t b{color:var(--ace-blue-d)}
+.ph-dn .ph-t b{color:#B93A2C}
+.ph-s{font-size:16px;color:var(--ink-4);letter-spacing:-.03em}
+.ph-s b{font-weight:800;color:var(--ink-3)}
+
+.ph-bars{position:relative;padding:0 24px;display:flex;flex-direction:column;gap:18px}
+.brow{display:grid;grid-template-columns:126px 1fr 96px;align-items:center}
+.bname{font-size:16.5px;font-weight:700;color:var(--ink-4);letter-spacing:-.035em}
+.bname.on{color:var(--ace-blue-d)}
+.btrack{height:34px;background:#F4F6F8;border-radius:5px}
+.bfill{height:100%;border-radius:5px}
+.bfill.gray{background:#9AA5B1}
+.bfill.blue{background:var(--ace-blue)}
+.bval{text-align:right;font-size:24px;font-weight:800;letter-spacing:-.03em}
+.bval.gray{color:var(--ink-4)}
+.bval.blue{color:var(--ace-blue-d)}
+/* 회색 막대의 절반 지점 — 파란 막대가 여기서 멈추는 것을 보여주는 기준선 */
+.half{position:absolute;top:-18px;bottom:-6px;width:0;border-left:1.5px dashed var(--ace-blue)}
+.half span{
+  position:absolute;top:-21px;left:50%;transform:translateX(-50%);white-space:nowrap;
+  background:#fff;padding:0 6px;
+  font-size:13px;font-weight:700;color:var(--ace-blue);letter-spacing:-.03em;
+}
+.ph-ratio{
+  height:100%;border-left:1px solid var(--gray-line);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
+}
+.pr-v{font-size:52px;font-weight:800;color:var(--ace-blue-d);letter-spacing:-.05em;line-height:1}
+.pr-v small{font-size:26px;font-weight:800;margin-left:1px}
+.pr-l{font-size:15.5px;font-weight:600;color:var(--ink-3);text-align:center;letter-spacing:-.035em;line-height:1.4}
+
 .ud-f{
   text-align:center;font-size:17.5px;font-weight:600;letter-spacing:-.035em;
   padding:8px 0;border-radius:6px;margin-top:6px;
@@ -722,21 +778,63 @@ table.m tr:last-child td{border-bottom:0}
     </ul>
   </div>
 
-  <div class="panel" style="height:388px">
-    <div class="cols">
-      <div class="col">
-        <div class="updown">
-          <div class="ud-h ud-up">반도체 주식이 <b>오른</b> 달 &nbsp;·&nbsp; 67개월 중 35개월</div>
-          <div class="fill"><div data-chart="bars-up" style="width:100%;height:100%"></div></div>
-          <div class="ud-f ud-f-up">주식이 오른 만큼의 <b>약 48%</b>만 따라 올랐습니다</div>
+  <div class="panel" style="height:392px;padding:0;overflow:hidden">
+    <!-- 열 머리글: 국면 | 두 포트폴리오의 월평균 수익률 | 움직인 폭 -->
+    <div class="ph-head">
+      <div>국면</div>
+      <div>같은 기간 월평균 수익률 &nbsp;<span>(막대 길이는 두 국면 공통 기준)</span></div>
+      <div>이 상품이 움직인 폭</div>
+    </div>
+
+    <!-- 상승 국면 -->
+    <div class="ph ph-up">
+      <div class="ph-lab">
+        <div class="ph-tag">상승 국면</div>
+        <div class="ph-t">반도체 주식이 <b>오른</b> 달</div>
+        <div class="ph-s">67개월 중 <b>35개월</b></div>
+      </div>
+      <div class="ph-bars">
+        <div class="half" style="left:calc(150px + (100% - 270px) * 0.5)"><span>회색 막대의 절반</span></div>
+        <div class="brow">
+          <div class="bname">반도체 주식만</div>
+          <div class="btrack"><div class="bfill gray" style="width:100%"></div></div>
+          <div class="bval gray">+13.8%</div>
+        </div>
+        <div class="brow">
+          <div class="bname on">이 상품</div>
+          <div class="btrack"><div class="bfill blue" style="width:48.6%"></div></div>
+          <div class="bval blue">+6.7%</div>
         </div>
       </div>
-      <div class="col sep">
-        <div class="updown">
-          <div class="ud-h ud-dn">반도체 주식이 <b>떨어진</b> 달 &nbsp;·&nbsp; 67개월 중 32개월</div>
-          <div class="fill"><div data-chart="bars-dn" style="width:100%;height:100%"></div></div>
-          <div class="ud-f ud-f-dn">주식이 떨어진 만큼의 <b>약 48%</b>만 떨어졌습니다</div>
+      <div class="ph-ratio">
+        <div class="pr-v">48<small>%</small></div>
+        <div class="pr-l">주식이 오른 폭의<br>절반만 따라 상승</div>
+      </div>
+    </div>
+
+    <!-- 하락 국면 -->
+    <div class="ph ph-dn">
+      <div class="ph-lab">
+        <div class="ph-tag">하락 국면</div>
+        <div class="ph-t">반도체 주식이 <b>떨어진</b> 달</div>
+        <div class="ph-s">67개월 중 <b>32개월</b></div>
+      </div>
+      <div class="ph-bars">
+        <div class="half" style="left:calc(150px + (100% - 270px) * 0.2285)"><span>회색 막대의 절반</span></div>
+        <div class="brow">
+          <div class="bname">반도체 주식만</div>
+          <div class="btrack"><div class="bfill gray" style="width:45.7%"></div></div>
+          <div class="bval gray">-6.3%</div>
         </div>
+        <div class="brow">
+          <div class="bname on">이 상품</div>
+          <div class="btrack"><div class="bfill blue" style="width:21.7%"></div></div>
+          <div class="bval blue">-3.0%</div>
+        </div>
+      </div>
+      <div class="ph-ratio">
+        <div class="pr-v">48<small>%</small></div>
+        <div class="pr-l">주식이 떨어진 폭의<br>절반만 하락</div>
       </div>
     </div>
   </div>
@@ -1087,20 +1185,6 @@ function render(){
         {i:1, c:C.blue,  n:'TOP2 + 삼성전기 (40:40:20)', w:2.6},
         {i:2, c:'#9AA5B1', n:'TOP2 (50:50)', w:2.2, dash:'6 4'}
       ], {step:200});
-    }
-
-    else if (kind === 'bars-up'){
-      node.innerHTML = twoBars(560, 250, [
-        {n:'반도체 주식만 담았다면', sub:'반도체 주식 100%', v:13.8, c:'#9AA5B1'},
-        {n:'이 상품', sub:'반도체 50% + 채권 50%', v:6.7, c:C.blue}
-      ]);
-    }
-
-    else if (kind === 'bars-dn'){
-      node.innerHTML = twoBars(560, 250, [
-        {n:'반도체 주식만 담았다면', sub:'반도체 주식 100%', v:-6.3, c:'#9AA5B1'},
-        {n:'이 상품', sub:'반도체 50% + 채권 50%', v:-3.0, c:C.blue}
-      ], {neg:true});
     }
 
     else if (kind === 'scatter'){
