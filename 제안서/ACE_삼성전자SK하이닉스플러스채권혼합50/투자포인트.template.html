@@ -239,6 +239,14 @@ table.m tr:last-child td{border-bottom:0}
 }
 .ud-up{background:var(--ace-sky-l);color:var(--ace-blue-d)}
 .ud-dn{background:#FDEFEE;color:#C0392B}
+.ud-f{
+  text-align:center;font-size:17.5px;font-weight:600;letter-spacing:-.035em;
+  padding:8px 0;border-radius:6px;margin-top:6px;
+}
+.ud-f b{font-weight:800}
+.ud-f-up{background:var(--ace-sky-l);color:var(--ace-blue-d)}
+.ud-f-dn{background:#FDEFEE;color:#B93A2C}
+.callout b{font-weight:800}
 .callout{
   position:absolute;left:41px;top:722px;width:1218px;height:38px;
   display:flex;align-items:center;justify-content:center;
@@ -703,14 +711,14 @@ table.m tr:last-child td{border-bottom:0}
 <section class="slide" id="p12">
   <img class="logo" src="__IMG_LOGO__" alt="ACE ETF">
   <div class="cat">③ 반도체 50% + 단기 우량채권 50%</div>
-  <h1 class="title">상승은 참여하고, 하락은 완화하는 50:50 포트폴리오</h1>
+  <h1 class="title">오를 때도 절반, 떨어질 때도 절반</h1>
 
   <div class="graybox">
-    <div class="gb-h">반도체의 방향성은 가져가면서 등락폭은 낮추는 구조</div>
+    <div class="gb-h">반도체가 오르면 같이 오르고, 떨어질 때는 덜 떨어집니다</div>
     <ul class="gb-list">
-      <li>주식 상승월에는 반도체 상승 흐름에 약 절반 수준으로 참여</li>
-      <li>주식 하락월에는 평균 하락폭 역시 약 절반 수준으로 완화</li>
-      <li>상승 참여와 하락 완화를 함께 추구해 장기 투자 시 가격 변동에 대한 부담 축소</li>
+      <li>반도체 주식이 <b>오른 달</b> — 주식만 담았다면 평균 +13.8%, 이 상품은 <b>+6.7%</b></li>
+      <li>반도체 주식이 <b>떨어진 달</b> — 주식만 담았다면 평균 -6.3%, 이 상품은 <b>-3.0%</b></li>
+      <li>오를 때도 떨어질 때도 절반 정도만 움직이기 때문에, 가격이 흔들려도 부담이 작습니다</li>
     </ul>
   </div>
 
@@ -718,22 +726,24 @@ table.m tr:last-child td{border-bottom:0}
     <div class="cols">
       <div class="col">
         <div class="updown">
-          <div class="ud-h ud-up">주식 상승월 평균 수익률 &nbsp;(35개월)</div>
+          <div class="ud-h ud-up">반도체 주식이 <b>오른</b> 달 &nbsp;·&nbsp; 67개월 중 35개월</div>
           <div class="fill"><div data-chart="bars-up" style="width:100%;height:100%"></div></div>
+          <div class="ud-f ud-f-up">주식이 오른 만큼의 <b>약 48%</b>만 따라 올랐습니다</div>
         </div>
       </div>
       <div class="col sep">
         <div class="updown">
-          <div class="ud-h ud-dn">주식 하락월 평균 수익률 &nbsp;(32개월)</div>
+          <div class="ud-h ud-dn">반도체 주식이 <b>떨어진</b> 달 &nbsp;·&nbsp; 67개월 중 32개월</div>
           <div class="fill"><div data-chart="bars-dn" style="width:100%;height:100%"></div></div>
+          <div class="ud-f ud-f-dn">주식이 떨어진 만큼의 <b>약 48%</b>만 떨어졌습니다</div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="callout">주식부분 하락월 32개월 중 32개월 모두 채권혼합50 상대 우위</div>
-  <div class="keymsg">반도체 상승은 약 절반 참여, 하락폭도 약 절반 수준으로 완화</div>
-  <div class="src">* 자료: 한국투자신탁운용, 2021.01 ~ 2026.07 월간 수익률 기준. 주식부분 = KAP 삼성전자SK하이닉스플러스지수, 채권혼합50 = 비교지수</div>
+  <div class="callout"><span>반도체 주식이 떨어진 32개월, <b>한 달도 빠짐없이</b> 이 상품의 손실이 더 작았습니다</span></div>
+  <div class="keymsg">덜 오르는 대신, 덜 떨어집니다</div>
+  <div class="src">* 자료: 한국투자신탁운용, 2021.01 ~ 2026.07 월간 수익률 기준. ‘반도체 주식만’ = KAP 삼성전자SK하이닉스플러스지수, ‘이 상품’ = 비교지수. 위 수치는 해당 구간 월평균 수익률입니다.</div>
   <div class="disc">※ 과거의 성과가 미래의 수익을 보장하지 않습니다.</div>
   <div class="pageno">12</div>
 </section>
@@ -1080,16 +1090,16 @@ function render(){
     }
 
     else if (kind === 'bars-up'){
-      node.innerHTML = twoBars(560, 262, [
-        {n:'주식부분', sub:'반도체 주식 100%', v:13.8, c:'#9AA5B1'},
-        {n:'채권혼합50', sub:'주식 50% + 채권 50%', v:6.7, c:C.blue}
+      node.innerHTML = twoBars(560, 250, [
+        {n:'반도체 주식만 담았다면', sub:'반도체 주식 100%', v:13.8, c:'#9AA5B1'},
+        {n:'이 상품', sub:'반도체 50% + 채권 50%', v:6.7, c:C.blue}
       ]);
     }
 
     else if (kind === 'bars-dn'){
-      node.innerHTML = twoBars(560, 262, [
-        {n:'주식부분', sub:'반도체 주식 100%', v:-6.3, c:'#9AA5B1'},
-        {n:'채권혼합50', sub:'주식 50% + 채권 50%', v:-3.0, c:C.blue}
+      node.innerHTML = twoBars(560, 250, [
+        {n:'반도체 주식만 담았다면', sub:'반도체 주식 100%', v:-6.3, c:'#9AA5B1'},
+        {n:'이 상품', sub:'반도체 50% + 채권 50%', v:-3.0, c:C.blue}
       ], {neg:true});
     }
 

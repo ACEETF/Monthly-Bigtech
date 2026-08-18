@@ -239,6 +239,14 @@ table.m tr:last-child td{border-bottom:0}
 }
 .ud-up{background:var(--ace-sky-l);color:var(--ace-blue-d)}
 .ud-dn{background:#FDEFEE;color:#C0392B}
+.ud-f{
+  text-align:center;font-size:17.5px;font-weight:600;letter-spacing:-.035em;
+  padding:8px 0;border-radius:6px;margin-top:6px;
+}
+.ud-f b{font-weight:800}
+.ud-f-up{background:var(--ace-sky-l);color:var(--ace-blue-d)}
+.ud-f-dn{background:#FDEFEE;color:#B93A2C}
+.callout b{font-weight:800}
 .callout{
   position:absolute;left:41px;top:722px;width:1218px;height:38px;
   display:flex;align-items:center;justify-content:center;
@@ -703,14 +711,14 @@ table.m tr:last-child td{border-bottom:0}
 <section class="slide" id="p12">
   <img class="logo" src="data:image/png;base64,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" alt="ACE ETF">
   <div class="cat">③ 반도체 50% + 단기 우량채권 50%</div>
-  <h1 class="title">상승은 참여하고, 하락은 완화하는 50:50 포트폴리오</h1>
+  <h1 class="title">오를 때도 절반, 떨어질 때도 절반</h1>
 
   <div class="graybox">
-    <div class="gb-h">반도체의 방향성은 가져가면서 등락폭은 낮추는 구조</div>
+    <div class="gb-h">반도체가 오르면 같이 오르고, 떨어질 때는 덜 떨어집니다</div>
     <ul class="gb-list">
-      <li>주식 상승월에는 반도체 상승 흐름에 약 절반 수준으로 참여</li>
-      <li>주식 하락월에는 평균 하락폭 역시 약 절반 수준으로 완화</li>
-      <li>상승 참여와 하락 완화를 함께 추구해 장기 투자 시 가격 변동에 대한 부담 축소</li>
+      <li>반도체 주식이 <b>오른 달</b> — 주식만 담았다면 평균 +13.8%, 이 상품은 <b>+6.7%</b></li>
+      <li>반도체 주식이 <b>떨어진 달</b> — 주식만 담았다면 평균 -6.3%, 이 상품은 <b>-3.0%</b></li>
+      <li>오를 때도 떨어질 때도 절반 정도만 움직이기 때문에, 가격이 흔들려도 부담이 작습니다</li>
     </ul>
   </div>
 
@@ -718,22 +726,24 @@ table.m tr:last-child td{border-bottom:0}
     <div class="cols">
       <div class="col">
         <div class="updown">
-          <div class="ud-h ud-up">주식 상승월 평균 수익률 &nbsp;(35개월)</div>
+          <div class="ud-h ud-up">반도체 주식이 <b>오른</b> 달 &nbsp;·&nbsp; 67개월 중 35개월</div>
           <div class="fill"><div data-chart="bars-up" style="width:100%;height:100%"></div></div>
+          <div class="ud-f ud-f-up">주식이 오른 만큼의 <b>약 48%</b>만 따라 올랐습니다</div>
         </div>
       </div>
       <div class="col sep">
         <div class="updown">
-          <div class="ud-h ud-dn">주식 하락월 평균 수익률 &nbsp;(32개월)</div>
+          <div class="ud-h ud-dn">반도체 주식이 <b>떨어진</b> 달 &nbsp;·&nbsp; 67개월 중 32개월</div>
           <div class="fill"><div data-chart="bars-dn" style="width:100%;height:100%"></div></div>
+          <div class="ud-f ud-f-dn">주식이 떨어진 만큼의 <b>약 48%</b>만 떨어졌습니다</div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="callout">주식부분 하락월 32개월 중 32개월 모두 채권혼합50 상대 우위</div>
-  <div class="keymsg">반도체 상승은 약 절반 참여, 하락폭도 약 절반 수준으로 완화</div>
-  <div class="src">* 자료: 한국투자신탁운용, 2021.01 ~ 2026.07 월간 수익률 기준. 주식부분 = KAP 삼성전자SK하이닉스플러스지수, 채권혼합50 = 비교지수</div>
+  <div class="callout"><span>반도체 주식이 떨어진 32개월, <b>한 달도 빠짐없이</b> 이 상품의 손실이 더 작았습니다</span></div>
+  <div class="keymsg">덜 오르는 대신, 덜 떨어집니다</div>
+  <div class="src">* 자료: 한국투자신탁운용, 2021.01 ~ 2026.07 월간 수익률 기준. ‘반도체 주식만’ = KAP 삼성전자SK하이닉스플러스지수, ‘이 상품’ = 비교지수. 위 수치는 해당 구간 월평균 수익률입니다.</div>
   <div class="disc">※ 과거의 성과가 미래의 수익을 보장하지 않습니다.</div>
   <div class="pageno">12</div>
 </section>
@@ -1080,16 +1090,16 @@ function render(){
     }
 
     else if (kind === 'bars-up'){
-      node.innerHTML = twoBars(560, 262, [
-        {n:'주식부분', sub:'반도체 주식 100%', v:13.8, c:'#9AA5B1'},
-        {n:'채권혼합50', sub:'주식 50% + 채권 50%', v:6.7, c:C.blue}
+      node.innerHTML = twoBars(560, 250, [
+        {n:'반도체 주식만 담았다면', sub:'반도체 주식 100%', v:13.8, c:'#9AA5B1'},
+        {n:'이 상품', sub:'반도체 50% + 채권 50%', v:6.7, c:C.blue}
       ]);
     }
 
     else if (kind === 'bars-dn'){
-      node.innerHTML = twoBars(560, 262, [
-        {n:'주식부분', sub:'반도체 주식 100%', v:-6.3, c:'#9AA5B1'},
-        {n:'채권혼합50', sub:'주식 50% + 채권 50%', v:-3.0, c:C.blue}
+      node.innerHTML = twoBars(560, 250, [
+        {n:'반도체 주식만 담았다면', sub:'반도체 주식 100%', v:-6.3, c:'#9AA5B1'},
+        {n:'이 상품', sub:'반도체 50% + 채권 50%', v:-3.0, c:C.blue}
       ], {neg:true});
     }
 
