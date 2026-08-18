@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ACE 삼성전자SK하이닉스플러스채권혼합50 · 주요 투자 포인트</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<style>
+/* ============================================================
+   ACE ETF CI 기준 색상 (ACE_ETF CI 가이드 COLOR SYSTEM)
+   ACE BLUE #557EAA / BLACK #000000 / GRAY #383838
+   CORAL #FF6155 / CREAM #FBECE1 / WHITE #FFFFFF / BROWN #622A17
+   보조색은 제안서 테마(ACE) 팔레트에서 파생
+   ============================================================ */
+:root{
+  --ace-blue:#557EAA;
+  --ace-blue-d:#2F5C99;
+  --ace-blue-l:#6390BF;
+  --ace-sky:#BEDBE8;
+  --ace-sky-l:#EDF3F9;
+  --ace-coral:#FF6155;
+  --ace-cream:#FBECE1;
+  --ace-brown:#622A17;
+  --ink:#1F1F1F;
+  --ink-2:#383838;
+  --ink-3:#55606E;
+  --ink-4:#73808F;
+  --rule:#313131;
+  --gray-box:#F2F2F2;
+  --gray-line:#D9DDE2;
+  --page-w:1300px;
+  --page-h:900px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body,.slide{word-break:keep-all;overflow-wrap:break-word}
+html{background:#5B6570}
+body{
+  font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","맑은 고딕",sans-serif;
+  color:var(--ink);
+  -webkit-font-smoothing:antialiased;
+  padding:36px 0;
+}
+.deck{display:flex;flex-direction:column;align-items:center;gap:28px}
+
+/* ---------- 슬라이드 프레임 ---------- */
+.slide{
+  position:relative;
+  width:var(--page-w);height:var(--page-h);
+  background:#fff;
+  overflow:hidden;
+  box-shadow:0 10px 34px rgba(0,0,0,.30);
+  flex:0 0 auto;
+}
+.logo{position:absolute;top:16px;right:38px;height:17px;width:auto}
+.cat{position:absolute;top:15px;left:40px;font-size:21px;font-weight:700;color:var(--ace-blue);letter-spacing:-.02em}
+.title{position:absolute;top:44px;left:38px;right:38px;font-size:55px;font-weight:800;color:var(--ink);letter-spacing:-.035em;line-height:1.14}
+.title .hl{color:var(--ace-blue)}
+
+/* ---------- 회색 박스 ---------- */
+.graybox{
+  position:absolute;left:41px;top:124px;width:1218px;
+  background:var(--gray-box);border-radius:10px;
+  padding:17px 30px 18px;
+}
+.gb-h{font-size:25px;font-weight:800;color:var(--ace-blue);letter-spacing:-.03em;margin-bottom:8px}
+.gb-list{list-style:none}
+.gb-list li{
+  position:relative;padding-left:20px;
+  font-size:20.5px;line-height:1.52;color:var(--ink-2);letter-spacing:-.028em;
+}
+.gb-list li+li{margin-top:2px}
+.gb-list li::before{content:"•";position:absolute;left:2px;top:0;color:var(--ink-2)}
+.gb-list b{font-weight:700;color:var(--ace-blue-d)}
+
+/* ---------- 본문 패널 ---------- */
+.panel{
+  position:absolute;left:41px;top:322px;width:1218px;height:434px;
+  border:1px solid var(--rule);border-radius:9px;
+  padding:12px 14px 14px;
+}
+.pane-h{
+  font-size:18px;font-weight:700;color:var(--ink);text-align:center;
+  letter-spacing:-.03em;margin-bottom:6px;
+}
+.cols{display:flex;height:100%;gap:14px}
+.col{flex:1;display:flex;flex-direction:column;min-width:0}
+.col.sep{border-left:1px solid var(--gray-line);padding-left:14px}
+.fill{flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+.fill img{max-width:100%;max-height:100%;object-fit:contain}
+.fill svg{width:100%;height:100%}
+
+/* ---------- 하단 강조 메시지 ---------- */
+.keymsg{
+  position:absolute;left:41px;top:768px;width:1218px;height:46px;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--ace-sky-l);border-left:6px solid var(--ace-blue);
+  border-radius:5px;
+  font-size:23px;font-weight:800;color:var(--ace-blue-d);letter-spacing:-.035em;
+}
+.src{position:absolute;left:46px;top:822px;right:46px;font-size:12.5px;color:#8A8A8A;letter-spacing:-.02em}
+.src.r{text-align:right}
+.disc{position:absolute;left:46px;top:846px;right:120px;font-size:13.5px;color:var(--ace-coral);letter-spacing:-.03em;line-height:1.35}
+.pageno{position:absolute;right:44px;bottom:20px;font-size:17px;font-weight:600;color:var(--ink-4)}
+
+/* ---------- 표 ---------- */
+table.t{width:100%;border-collapse:collapse;font-size:15px;letter-spacing:-.025em}
+table.t th{
+  background:var(--ace-blue);color:#fff;font-weight:700;
+  padding:7px 8px;text-align:center;font-size:15px;
+}
+table.t td{padding:6px 8px;border-bottom:1px solid #E6E9ED;color:var(--ink-2);vertical-align:middle}
+table.t tr:last-child td{border-bottom:0}
+table.t td.c{text-align:center}
+table.t td.k{font-weight:700;color:var(--ace-blue-d);text-align:center;white-space:nowrap}
+table.t tbody tr:nth-child(even){background:#FAFBFC}
+
+/* 수치 비교표 */
+table.m{width:100%;border-collapse:collapse;font-size:18px;letter-spacing:-.03em}
+table.m th{padding:8px 6px;font-size:16px;font-weight:700;color:var(--ink-3);border-bottom:2px solid var(--ace-blue);text-align:center}
+table.m th:first-child{text-align:left}
+table.m td{padding:11px 6px;text-align:center;border-bottom:1px solid #E6E9ED;color:var(--ink-3);font-weight:600}
+table.m td:first-child{text-align:left;color:var(--ink-2);font-weight:700}
+table.m td.win{color:var(--ace-blue-d);font-weight:800;font-size:20px}
+table.m tr:last-child td{border-bottom:0}
+
+/* ---------- 카드 ---------- */
+.cards{position:absolute;left:41px;width:1218px;display:flex;gap:20px}
+.card{
+  flex:1;border:1px solid var(--gray-line);border-radius:12px;
+  background:#fff;padding:0 0 18px;position:relative;overflow:hidden;
+  display:flex;flex-direction:column;
+}
+.card-num{
+  position:absolute;top:0;left:0;
+  background:var(--ace-blue);color:#fff;font-size:17px;font-weight:800;
+  padding:5px 14px 6px;border-radius:0 0 10px 0;letter-spacing:.04em;
+}
+.card-h{
+  margin:44px 22px 0;min-height:74px;display:flex;align-items:center;
+  font-size:24px;font-weight:800;color:var(--ace-blue-d);letter-spacing:-.04em;line-height:1.28;
+}
+.card-rule{height:2px;background:var(--ace-sky);margin:12px 22px 14px}
+.card ul{list-style:none;margin:0 22px}
+.card li{
+  position:relative;padding-left:17px;font-size:19px;line-height:1.5;
+  color:var(--ink-2);letter-spacing:-.03em;
+}
+.card li+li{margin-top:7px}
+.card .viz{margin:auto 22px 0;padding-top:16px}
+.card .viz-cap{margin-top:9px;text-align:center;font-size:15.5px;font-weight:700;color:var(--ink-4);letter-spacing:-.035em;line-height:1.4}
+.card li::before{content:"";position:absolute;left:0;top:11px;width:7px;height:7px;border-radius:50%;background:var(--ace-blue-l)}
+
+/* ---------- p4 전용 ---------- */
+.hero{
+  position:absolute;left:41px;top:150px;width:1218px;height:96px;
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  background:linear-gradient(90deg,#EDF3F9 0%,#F7FAFC 100%);
+  border-radius:10px;
+  font-size:33px;font-weight:800;color:var(--ink);letter-spacing:-.045em;line-height:1.3;
+  padding:0 34px;
+}
+.hero .hl{color:var(--ace-blue)}
+.brandline{
+  position:absolute;left:0;right:0;top:262px;text-align:center;
+  font-size:15px;font-weight:700;color:var(--ink-4);letter-spacing:.12em;
+}
+
+/* ---------- p7 구성 바 ---------- */
+.compbar{display:flex;width:100%;height:52px;border-radius:6px;overflow:hidden}
+.compbar div{
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:19px;font-weight:800;letter-spacing:-.03em;
+  white-space:nowrap;overflow:hidden;padding:0 4px;
+}
+.compscale{display:flex;width:100%;margin-top:6px;font-size:13px;color:var(--ink-4)}
+.stockcard{
+  flex:1;border:1px solid var(--gray-line);border-radius:10px;padding:14px 18px;
+  display:flex;flex-direction:column;
+}
+.stockcard h4{font-size:24px;font-weight:800;letter-spacing:-.04em;color:var(--ace-blue-d);margin-bottom:4px}
+.stockcard .w{font-size:15px;font-weight:700;color:var(--ink-4);margin-bottom:9px}
+.stockcard ul{list-style:none}
+.stockcard li{position:relative;padding-left:15px;font-size:19px;line-height:1.85;color:var(--ink-2);letter-spacing:-.03em}
+.stockcard li::before{content:"";position:absolute;left:0;top:13px;width:6px;height:6px;border-radius:50%;background:var(--ace-blue-l)}
+.stockcard .tag{
+  margin-top:auto;text-align:center;border-radius:7px;padding:9px 6px;
+  background:var(--ace-sky-l);color:var(--ace-blue-d);
+  font-size:16.5px;font-weight:800;letter-spacing:-.035em;
+}
+.stockcard.mute .tag{background:#F1F3F5;color:var(--ink-3)}
+
+/* ---------- p8 밸류체인 ---------- */
+.vc{display:flex;flex-direction:column;align-items:center;gap:9px;height:100%;width:100%;justify-content:center}
+.vc-top{
+  background:var(--ace-blue-d);color:#fff;border-radius:7px;
+  padding:8px 26px;font-size:19px;font-weight:800;letter-spacing:-.03em;
+}
+.vc-arrow{color:var(--ace-blue);font-size:20px;line-height:1}
+.vc-row{display:flex;align-items:center;gap:12px;width:100%}
+.vc-box{
+  flex:1;border:1.5px solid var(--ace-blue);border-radius:9px;background:#F7FAFC;
+  padding:14px 12px;text-align:center;
+  display:flex;flex-direction:column;justify-content:center;min-height:92px;
+}
+.vc-box .t{font-size:20px;font-weight:800;color:var(--ace-blue-d);letter-spacing:-.035em}
+.vc-box .s{font-size:16px;color:var(--ink-3);margin-top:4px;letter-spacing:-.035em;line-height:1.45;white-space:nowrap}
+.vc-plus{font-size:30px;font-weight:800;color:var(--ace-blue);flex:0 0 auto}
+.vc-out{
+  background:var(--ace-sky-l);border:1.5px solid var(--ace-blue);border-radius:8px;
+  padding:9px 26px;font-size:20px;font-weight:800;color:var(--ace-blue-d);letter-spacing:-.035em;
+}
+
+/* ---------- KPI ---------- */
+.kpis{display:flex;gap:12px}
+.kpi{
+  flex:1;border:1px solid var(--ace-sky);background:var(--ace-sky-l);border-radius:9px;
+  padding:9px 8px;text-align:center;
+}
+.kpi .l{font-size:14.5px;font-weight:700;color:var(--ink-3);letter-spacing:-.03em}
+.kpi .v{font-size:26px;font-weight:800;color:var(--ace-blue-d);letter-spacing:-.03em;margin-top:2px}
+
+/* 변동성/MDD 개선 블록 */
+.effect{display:flex;flex-direction:column;gap:11px;height:100%;justify-content:center}
+.effect-row{
+  display:flex;align-items:center;gap:14px;
+  border:1px solid var(--gray-line);border-radius:10px;padding:11px 16px;
+}
+.effect-row .lab{flex:0 0 168px;font-size:19px;font-weight:800;color:var(--ink-2);letter-spacing:-.035em}
+.effect-row .from{font-size:26px;font-weight:700;color:var(--ink-4);letter-spacing:-.02em}
+.effect-row .arw{font-size:22px;color:var(--ace-blue);font-weight:800}
+.effect-row .to{font-size:33px;font-weight:800;color:var(--ace-blue-d);letter-spacing:-.03em}
+.effect-row .note{margin-left:auto;font-size:15px;color:var(--ink-4);text-align:right;letter-spacing:-.03em;line-height:1.35}
+
+/* p12 상승/하락 비교 */
+.updown{display:flex;flex-direction:column;height:100%}
+.ud-h{
+  text-align:center;font-size:20px;font-weight:800;letter-spacing:-.035em;
+  padding:7px 0;border-radius:6px;margin-bottom:10px;
+}
+.ud-up{background:var(--ace-sky-l);color:var(--ace-blue-d)}
+.ud-dn{background:#FDEFEE;color:#C0392B}
+.callout{
+  position:absolute;left:41px;top:722px;width:1218px;height:38px;
+  display:flex;align-items:center;justify-content:center;
+  border:1px dashed var(--ace-blue);border-radius:6px;background:#fff;
+  font-size:18px;font-weight:700;color:var(--ace-blue-d);letter-spacing:-.035em;
+}
+
+@media print{
+  html,body{background:#fff;padding:0}
+  .deck{gap:0}
+  .slide{box-shadow:none;page-break-after:always;break-after:page}
+  .slide:last-child{page-break-after:auto;break-after:auto}
+  /* 슬라이드 캔버스(1300x900px)와 동일 비율 — 원본 제안서 10.833in x 7.5in 와 동일한 4:2.77 */
+  @page{size:1300px 900px;margin:0}
+}
+</style>
+</head>
+<body>
+<div class="deck">
+
+<!-- =========================== 4p. 주요 투자 포인트 =========================== -->
+<section class="slide" id="p4">
+  <img class="logo" src="__IMG_LOGO__" alt="ACE ETF">
+  <div class="cat">ACE 삼성전자SK하이닉스플러스채권혼합50</div>
+  <h1 class="title">주요 투자 포인트</h1>
+
+  <div class="hero">
+    <span><span class="hl">AI 반도체 핵심주</span>에 <span class="hl">Plus</span>를 더하고,<br>
+    <span class="hl">채권</span>으로 균형을 잡은 반도체 채권혼합 ETF</span>
+  </div>
+
+  <div class="cards" style="top:278px;height:474px">
+    <div class="card">
+      <div class="card-num">01</div>
+      <div class="card-h">AI 메모리 성장의 중심,<br>삼성전자 · SK하이닉스</div>
+      <div class="card-rule"></div>
+      <ul>
+        <li>삼성전자 20% + SK하이닉스 20% 고정 편입</li>
+        <li>주식자산 50% 중 80%를 TOP2에 투자</li>
+      </ul>
+      <div class="viz">
+        <div class="compbar" style="height:48px">
+          <div style="flex:40;background:var(--ace-blue-d);font-size:16px">TOP2 40%</div>
+          <div style="flex:10;background:var(--ace-blue-l);font-size:14px">10%</div>
+          <div style="flex:50;background:#C9D3DD;color:var(--ink-3);font-size:16px">채권 50%</div>
+        </div>
+        <div class="viz-cap">주식자산 50% 중 80%<br>= 전체 자산의 40%를 TOP2에 투자</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-num">02</div>
+      <div class="card-h">삼성전기까지 Plus,<br>AI 반도체 투자영역 확대</div>
+      <div class="card-rule"></div>
+      <ul>
+        <li>메모리 · HBM에 기판 · MLCC 성장성 추가</li>
+        <li>삼성전자 · SK하이닉스만으로 끝내지 않는 반도체 투자</li>
+      </ul>
+      <div class="viz">
+        <div style="display:flex;align-items:center;gap:10px">
+          <div class="vc-box" style="padding:11px 6px">
+            <div class="t" style="font-size:17px">메모리 · HBM</div>
+            <div class="s" style="font-size:14px">삼성전자 / SK하이닉스</div>
+          </div>
+          <div class="vc-plus" style="font-size:26px">+</div>
+          <div class="vc-box" style="padding:11px 6px">
+            <div class="t" style="font-size:17px">기판 · MLCC</div>
+            <div class="s" style="font-size:14px">삼성전기</div>
+          </div>
+        </div>
+        <div class="viz-cap">메모리 대표주에 AI 서버 핵심 부품까지</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-num">03</div>
+      <div class="card-h">반도체 50%<br>+ 단기 우량채권 50%</div>
+      <div class="card-rule"></div>
+      <ul>
+        <li>반도체 성장 기회에 참여</li>
+        <li>국내 단기 우량채권으로 변동성 완화 추구</li>
+      </ul>
+      <div class="viz">
+        <div style="display:flex;justify-content:center">
+          <div data-chart="donut-mini" style="width:140px;height:140px"></div>
+        </div>
+        <div class="viz-cap">반도체 주식 50% : 국내 단기 우량채권 50%</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="disc" style="top:846px">※ 상기 운용구조 및 전략은 예시이며, 실제 운용에서는 당사 사정 또는 시장상황 변동 등에 따라 변경될 수 있습니다.</div>
+  <div class="pageno">4</div>
+</section>
+
+<!-- =========================== 5p. AI 수요 확대 → 메모리 수요 확대 =========================== -->
+<section class="slide" id="p5">
+  <img class="logo" src="__IMG_LOGO__" alt="ACE ETF">
+  <div class="cat">① AI 메모리 성장의 중심, 삼성전자 · SK하이닉스</div>
+  <h1 class="title">AI 수요 확대는 메모리 수요 확대로 연결</h1>
+
+  <div class="graybox">
+    <div class="gb-h">AI 투자 확대는 메모리 수요 증가로 직결</div>
+    <ul class="gb-list">
+      <li>빅테크의 AI CAPEX 확대가 데이터센터용 메모리 수요 증가를 뒷받침</li>
+      <li>AI Agent 확산으로 GPU뿐 아니라 CPU 및 주변 메모리 활용도 함께 증가</li>
+      <li>AI 서비스 사용량 확대가 HBM · DRAM 등 고성능 메모리 수요의 구조적 성장을 견인</li>
+    </ul>
+  </div>
+
+  <div class="panel">
+    <div class="cols">
+      <div class="col">
+        <div class="pane-h">빅테크 AI CAPEX 추이(분기)</div>
+        <div class="fill"><img src="__IMG_CAPEX__" alt="빅테크 분기 CAPEX 추이"></div>
+      </div>
+      <div class="col sep">
+        <div class="pane-h">AI 서비스 · 토큰 사용량 추이</div>
+        <div class="fill"><img src="__IMG_TOKEN__" alt="OpenRouter 토큰 사용량 추이"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="keymsg">AI 투자가 가속될수록, 메모리 반도체의 구조적 수요도 함께 확대</div>
+  <div class="src">* 자료(좌): The Wall Street Journal, 2025년 3분기 실적 기준 &nbsp;|&nbsp; * 자료(우): MacroMicro, OpenRouter, 2026.6.8 기준</div>
+  <div class="disc">※ 상기 운용구조 및 전략은 예시이며, 실제 운용에서는 당사 사정 또는 시장상황 변동 등에 따라 변경될 수 있습니다.</div>
+  <div class="pageno">5</div>
+</section>
+
+<!-- =========================== 6p. 메모리 사이클: 공급 측면 =========================== -->
+<section class="slide" id="p6">
+  <img class="logo" src="__IMG_LOGO__" alt="ACE ETF">
+  <div class="cat">① AI 메모리 성장의 중심, 삼성전자 · SK하이닉스</div>
+  <h1 class="title">메모리 사이클은 지속된다: 공급 측면</h1>
+
+  <div class="graybox">
+    <div class="gb-h">수요는 빠르게 늘지만, 공급 확대에는 시간이 필요</div>
+    <ul class="gb-list">
+      <li>HBM · DRAM 증설에는 대규모 CAPEX와 긴 생산 리드타임이 필요</li>
+      <li>단기간 공급 확대가 쉽지 않아 AI 메모리 수급의 타이트한 환경 지속 가능</li>
+      <li>장기공급계약 확대는 메모리 기업의 실적 가시성을 높이는 요인</li>
+    </ul>
+  </div>
+
+  <div class="panel">
+    <div class="cols">
+      <div class="col">
+        <div class="pane-h">주요 HBM · DRAM 장기공급계약(LTA) 사례</div>
+        <div style="flex:1;min-height:0;overflow:hidden">
+        <table class="t">
+          <thead><tr><th style="width:74px">시점</th><th style="width:112px">공급사</th><th>핵심 내용</th><th style="width:96px">기간 · 조건</th></tr></thead>
+          <tbody>
+            <tr><td class="c">4/23</td><td class="k">SK하이닉스</td><td>1Q 컨콜 — 클라우드 · 빅테크의 다년 LTA 요청 급증</td><td class="c">N년</td></tr>
+            <tr><td class="c">4/30</td><td class="k">삼성전자</td><td>1Q 컨콜 — 일부 고객과 다년 공급계약 완료(NDA)</td><td class="c">N년</td></tr>
+            <tr><td class="c">4월 말<br>~5월 초</td><td class="k">샌디스크</td><td>고객 5곳과 LTA 총 5건 체결 · FY27 공급물량 상당분 확정</td><td class="c">최대 5년<br>물량 · 가격 확정</td></tr>
+            <tr><td class="c">6/8</td><td class="k">SK하이닉스<br>(SK그룹)</td><td>엔비디아와 AI 팩토리용 차세대 메모리 공동개발 + 다년 공급</td><td class="c">2년+<br>연장 옵션</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+      <div class="col sep">
+        <div class="pane-h">메모리 생산시설 증설 단계별 리드타임</div>
+        <div style="flex:1;min-height:0;overflow:hidden">
+        <table class="t">
+          <thead><tr><th style="width:150px">구분</th><th>내용</th><th style="width:118px">리드타임</th></tr></thead>
+          <tbody>
+            <tr><td class="k">표준 팹 1기</td><td>투자 $100억+ · 건설인력 7,000명 · 장비 반입</td><td class="c">3~4년<br><span style="font-size:13px;color:#8A8A8A">완공까지</span></td></tr>
+            <tr><td class="k">업계 표준 추정</td><td>가동까지 3~5년 · 손익분기 8~10년</td><td class="c">3~5년<br><span style="font-size:13px;color:#8A8A8A">가동까지</span></td></tr>
+            <tr><td class="k">그린필드 ①<br>TSMC 애리조나</td><td>2020년 발표 → Fab1 양산 2025년 전후</td><td class="c">5년+<br><span style="font-size:13px;color:#8A8A8A">발표 → 양산</span></td></tr>
+            <tr><td class="k">그린필드 ②<br>SK하이닉스 용인</td><td>클러스터 착수(부지 조성)부터 첫 공장 Y1 가동까지</td><td class="c">8년<br><span style="font-size:13px;color:#8A8A8A">착수 → 가동</span></td></tr>
+            <tr><td class="k">범용 D램 라인</td><td>건설 18~24개월 + 수율 램프업 6~12개월</td><td class="c">2~3년<br><span style="font-size:13px;color:#8A8A8A">착공 → 양산</span></td></tr>
+            <tr><td class="k">확정 신공장 일정</td><td>용인 Y1 · 마이크론 신공장 2027년 하반기 가동</td><td class="c">2H27~<br><span style="font-size:13px;color:#8A8A8A">공급 기여 시작</span></td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="keymsg">AI 수요 확대와 제한적인 공급 증가가 맞물리며 메모리 업황의 지속 가능성을 높임</div>
+  <div class="src">* 자료(좌): 각사 자료 종합, 2026년 각 발표시점 기준 &nbsp;|&nbsp; * 자료(우): 각사 및 언론사 종합, 2026년 4월 기준</div>
+  <div class="disc">※ 상기 운용구조 및 전략은 예시이며, 실제 운용에서는 당사 사정 또는 시장상황 변동 등에 따라 변경될 수 있습니다.</div>
+  <div class="pageno">6</div>
+</section>
+
+<!-- =========================== 7p. 대한민국 AI 메모리 대표주에 집중 =========================== -->
+<section class="slide" id="p7">
+  <img class="logo" src="__IMG_LOGO__" alt="ACE ETF">
+  <div class="cat">① AI 메모리 성장의 중심, 삼성전자 · SK하이닉스</div>
+  <h1 class="title">대한민국 AI 메모리 대표주에 집중</h1>
+
+  <div class="graybox">
+    <div class="gb-h">주식자산의 80%를 삼성전자 · SK하이닉스에 집중</div>
+    <ul class="gb-list">
+      <li>삼성전자와 SK하이닉스를 각각 20%씩 고정 편입</li>
+      <li>전체 자산의 주식 비중 50% 중 40%를 국내 대표 반도체 TOP2로 구성</li>
+      <li>AI 메모리 · HBM 업황 개선의 직접적인 수혜가 기대되는 대형주 중심 투자</li>
+    </ul>
+  </div>
+
+  <div class="panel">
+    <div style="display:flex;flex-direction:column;height:100%">
+      <div class="pane-h" style="text-align:left;padding-left:6px">ACE 삼성전자SK하이닉스플러스채권혼합50 자산 구성</div>
+      <div style="padding:0 6px">
+        <div class="compbar">
+          <div style="flex:20;background:var(--ace-blue-d)">삼성전자 20%</div>
+          <div style="flex:20;background:var(--ace-blue)">SK하이닉스 20%</div>
+          <div style="flex:10;background:var(--ace-blue-l)">삼성전기 10%</div>
+          <div style="flex:50;background:#C9D3DD;color:var(--ink-3)">국내 단기 우량채권 50%</div>
+        </div>
+        <div class="compscale">
+          <div style="flex:50;border-top:1px solid var(--ace-blue);padding-top:4px;color:var(--ace-blue-d);font-weight:700">반도체 주식 50%</div>
+          <div style="flex:50;border-top:1px solid #9AA5B1;padding-top:4px;text-align:right">채권 50%</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:16px;flex:1;min-height:0;margin-top:16px;padding:0 6px 2px">
+        <div class="stockcard">
+          <h4>삼성전자</h4>
+          <div class="w">고정 편입 비중 20% · 주식자산 내 40%</div>
+          <ul>
+            <li>DRAM · NAND · HBM</li>
+            <li>파운드리</li>
+            <li>글로벌 종합 반도체 기업</li>
+          </ul>
+          <div class="tag">AI 메모리 사이클 핵심 수혜주</div>
+        </div>
+        <div class="stockcard">
+          <h4>SK하이닉스</h4>
+          <div class="w">고정 편입 비중 20% · 주식자산 내 40%</div>
+          <ul>
+            <li>HBM · DRAM</li>
+            <li>AI 메모리 중심</li>
+            <li>글로벌 메모리 대표 기업</li>
+          </ul>
+          <div class="tag">HBM 시장을 선도하는 AI 메모리 대표주</div>
+        </div>
+        <div class="stockcard mute" style="background:#FAFBFC">
+          <h4 style="color:var(--ink-3)">삼성전기</h4>
+          <div class="w">고정 편입 비중 10% · 주식자산 내 20%</div>
+          <ul>
+            <li>FC-BGA 기판</li>
+            <li>MLCC</li>
+            <li>AI 서버 핵심 부품</li>
+          </ul>
+          <div class="tag">Plus 영역 · 상세 내용은 8~10p 참조</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="keymsg">반도체 주식 50% 중 40%를 삼성전자 · SK하이닉스에 집중</div>
+  <div class="src">* 상기 비중은 기초지수 산출 방법론상의 목표 비중이며, 실제 편입 비중은 시장상황 등에 따라 달라질 수 있습니다.</div>
+  <div class="disc">※ 상기 운용구조 및 전략은 예시이며, 실제 운용에서는 당사 사정 또는 시장상황 변동 등에 따라 변경될 수 있습니다.</div>
+  <div class="pageno">7</div>
+</section>
+
+<!-- =========================== 8p. 삼성전기까지 Plus =========================== -->
+<section class="slide" id="p8">
+  <img class="logo" src="__IMG_LOGO__" alt="ACE ETF">
+  <div class="cat">② 삼성전기까지 Plus, AI 반도체 투자영역 확대</div>
+  <h1 class="title">삼성전기까지 Plus, 메모리 너머의 성장 기회까지</h1>
+
+  <div class="graybox">
+    <div class="gb-h">TOP2에 핵심 부품 경쟁력을 더해 AI 반도체 투자영역 확대</div>
+    <ul class="gb-list">
+      <li>삼성전자 · SK하이닉스로 메모리 · HBM 중심의 AI 반도체 성장에 투자</li>
+      <li>삼성전기로 FC-BGA · MLCC 등 AI 서버 및 고성능 반도체 핵심 부품 영역까지 확대</li>
+      <li><b>삼성전기는 TOP2와 같은 방향성을 보이면서도, 상대적으로 낮은 상관관계를 나타냄</b></li>
+    </ul>
+  </div>
+
+  <div class="panel">
+    <div class="cols">
+      <div class="col" style="flex:55">
+        <div class="pane-h">AI 반도체 Value Chain</div>
+        <div class="fill" style="align-items:stretch">
+          <div class="vc">
+            <div class="vc-top">AI 인프라 투자 확대</div>
+            <div class="vc-arrow">▼</div>
+            <div class="vc-row">
+              <div class="vc-box">
+                <div class="t">메모리 · HBM</div>
+                <div class="s">삼성전자 / SK하이닉스</div>
+              </div>
+              <div class="vc-plus">+</div>
+              <div class="vc-box">
+                <div class="t">기판 · 핵심부품</div>
+                <div class="s">삼성전기<br>FC-BGA / MLCC</div>
+              </div>
+            </div>
+            <div class="vc-arrow">▼</div>
+            <div class="vc-out">AI 반도체 투자영역 확대</div>
+          </div>
+        </div>
+      </div>
+      <div class="col sep" style="flex:45">
+        <div class="pane-h">개별종목 일간수익률 상관계수</div>
+        <div class="fill" style="align-items:stretch;flex-direction:column;justify-content:center">
+          <table class="m" style="font-size:19px">
+            <thead><tr><th>구분</th><th style="width:130px">상관계수</th></tr></thead>
+            <tbody>
+              <tr><td>삼성전자 ↔ SK하이닉스</td><td class="win">0.72</td></tr>
+              <tr><td>삼성전자 ↔ 삼성전기</td><td class="win">0.60</td></tr>
+              <tr><td>SK하이닉스 ↔ 삼성전기</td><td class="win">0.56</td></tr>
+            </tbody>
+          </table>
+          <div style="margin-top:14px;background:var(--ace-sky-l);border-radius:7px;padding:10px 14px;font-size:16.5px;font-weight:700;color:var(--ace-blue-d);letter-spacing:-.035em;line-height:1.45;text-align:center">
+            TOP2와 양(+)의 상관관계를 보이면서도<br>TOP2 간 상관관계보다는 낮은 수준
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="keymsg">메모리 대표주에 기판 · MLCC까지 더해 AI 반도체 투자영역을 넓히는 Plus</div>
+  <div class="src">* 자료: 한국투자신탁운용, 개별종목 일간수익률 기준 상관계수, 2020.12.14 ~ 2026.08.13</div>
+  <div class="disc">※ 상기 운용구조 및 전략은 예시이며, 실제 운용에서는 당사 사정 또는 시장상황 변동 등에 따라 변경될 수 있습니다.</div>
+  <div class="pageno">8</div>
+</section>
+
+<!-- =========================== 9p. AI 기판 핵심 플레이어: 삼성전기 =========================== -->
+<section class="slide" id="p9">
+  <img class="logo" src="__IMG_LOGO__" alt="ACE ETF">
+  <div class="cat">② 삼성전기까지 Plus, AI 반도체 투자영역 확대</div>
+  <h1 class="title">AI 기판 핵심 플레이어: 삼성전기</h1>
+
+  <div class="graybox">
+    <div class="gb-h">AI 반도체 고성능화와 함께 커지는 기판 · MLCC 수요</div>
+    <ul class="gb-list">
+      <li>AI 서버 · 데이터센터 투자 확대에 따라 고사양 FC-BGA 및 MLCC 수요 증가</li>
+      <li>AI 반도체가 고성능 · 대형화될수록 칩 연결과 전력 안정성을 담당하는 핵심 부품의 중요도 확대</li>
+      <li>삼성전기는 FC-BGA와 MLCC를 모두 보유해 AI 인프라 확대의 수혜 기대</li>
+    </ul>
+  </div>
+
+  <div class="panel">
+    <div class="cols">
+      <div class="col">
+        <div class="pane-h">삼성전기 사업부 매출 구성</div>
+        <div class="fill"><div data-chart="donut-segments" style="width:100%;height:100%"></div></div>
+      </div>
+      <div class="col sep">
+        <div class="pane-h">패키지솔루션(FC-BGA) 매출 · 증감률 추이</div>
+        <div class="fill"><img src="__IMG_FCBGA__" alt="패키지솔루션 매출 추이"></div>
+      </div>
+      <div class="col sep">
+        <div class="pane-h">전사 영업이익 및 증감률 추이</div>
+        <div class="fill"><img src="__IMG_OP__" alt="영업이익 추이"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="keymsg">AI 인프라 고도화와 함께 삼성전기의 기판 · MLCC 성장성도 확대 기대</div>
+  <div class="src">* 자료(좌): 삼성전기, 한국투자신탁운용, 1Q26 기준 &nbsp;|&nbsp; * 자료(중 · 우): 삼성전기, 대신증권 추정, 2026년 5월 1일 기준</div>
+  <div class="disc">※ 상기 내용은 특정 종목의 매수 · 매도 권유가 아니며, 해당 종목의 편입 비중은 시장상황 등에 따라 변경될 수 있습니다.</div>
+  <div class="pageno">9</div>
+</section>
+
+<!-- =========================== 10p. Plus 효과 =========================== -->
+<section class="slide" id="p10">
+  <img class="logo" src="__IMG_LOGO__" alt="ACE ETF">
+  <div class="cat">② 삼성전기까지 Plus, AI 반도체 투자영역 확대</div>
+  <h1 class="title">Plus 효과: TOP2에 삼성전기를 더하다</h1>
+
+  <div class="graybox">
+    <div class="gb-h">삼성전기를 더한 포트폴리오에서 확인된 장기 성과 개선</div>
+    <ul class="gb-list">
+      <li>삼성전기 포함 포트폴리오는 동일 기간 TOP2 단순 조합 대비 높은 누적성과 기록</li>
+      <li>CAGR은 높아진 반면 연환산 변동성은 소폭 낮은 수준</li>
+      <li>Plus는 하락 방어보다는 투자영역 확대와 추가적인 성과 기회 확보에 의미</li>
+    </ul>
+  </div>
+
+  <div class="panel">
+    <div class="cols">
+      <div class="col" style="flex:65">
+        <div class="pane-h">누적수익률 추이 (2020.12.14 = 0%)</div>
+        <div class="fill"><div data-chart="plus-line" style="width:100%;height:100%"></div></div>
+      </div>
+      <div class="col sep" style="flex:35">
+        <div class="pane-h">주요 성과지표</div>
+        <div class="fill" style="align-items:stretch;flex-direction:column;justify-content:center">
+          <table class="m">
+            <thead><tr><th></th><th>TOP2+삼성전기</th><th>TOP2</th></tr></thead>
+            <tbody>
+              <tr><td>누적수익률</td><td class="win">730.8%</td><td>641.3%</td></tr>
+              <tr><td>CAGR</td><td class="win">45.3%</td><td>42.4%</td></tr>
+              <tr><td>연환산 변동성</td><td class="win">41.5%</td><td>42.8%</td></tr>
+            </tbody>
+          </table>
+          <div style="margin-top:14px;background:var(--ace-sky-l);border-radius:7px;padding:10px 14px;font-size:16px;color:var(--ink-3);letter-spacing:-.035em;line-height:1.45;text-align:center">
+            TOP2+삼성전기 = 40 : 40 : 20<br>TOP2 = 50 : 50
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="keymsg">삼성전기 Plus를 통해 투자영역을 넓히고 장기 성과 기회를 보완</div>
+  <div class="src">* 자료: 한국투자신탁운용, FnGuide. 2020.12.14 ~ 2026.08.13. 상기 성과는 특정 종목을 제시된 비중으로 가정하여 산출한 과거 시뮬레이션 결과이며, 매매비용 · 운용보수 · 세금 등 제반 비용이 반영되지 않았습니다.</div>
+  <div class="disc">※ 과거의 성과가 미래의 수익을 보장하지 않으며, 실제 운용성과 및 비교지수 성과와 다를 수 있습니다.</div>
+  <div class="pageno">10</div>
+</section>
+
+<!-- =========================== 11p. 50:50 구조 =========================== -->
+<section class="slide" id="p11">
+  <img class="logo" src="__IMG_LOGO__" alt="ACE ETF">
+  <div class="cat">③ 반도체 50% + 단기 우량채권 50%</div>
+  <h1 class="title">반도체 성장에 채권 안정성을 더한 50:50 구조</h1>
+
+  <div class="graybox">
+    <div class="gb-h">주식 100%의 높은 변동성을 채권 50%로 완화</div>
+    <ul class="gb-list">
+      <li>삼성전자 · SK하이닉스 · 삼성전기로 구성된 반도체 주식에 전체 자산의 50% 투자</li>
+      <li>나머지 50%는 국내 단기 국고채 · 통안채 중심 우량채권으로 구성</li>
+      <li>주식 대비 낮은 변동성의 채권을 결합해 전체 포트폴리오의 변동성 및 낙폭 완화</li>
+    </ul>
+  </div>
+
+  <div class="panel">
+    <div class="cols">
+      <div class="col" style="flex:40">
+        <div class="pane-h">자산 배분 구조</div>
+        <div class="fill"><div data-chart="donut-5050" style="width:100%;height:100%"></div></div>
+      </div>
+      <div class="col sep" style="flex:60">
+        <div class="pane-h">채권 50% 결합의 핵심 효과</div>
+        <div class="fill" style="align-items:stretch">
+          <div class="effect">
+            <div class="effect-row">
+              <div class="lab">연환산 변동성</div>
+              <div class="from">41.6%</div>
+              <div class="arw">▶</div>
+              <div class="to">20.8%</div>
+              <div class="note">주식 100% 대비<br>약 <b>절반</b> 수준</div>
+            </div>
+            <div class="effect-row">
+              <div class="lab">MDD</div>
+              <div class="from">-51.0%</div>
+              <div class="arw">▶</div>
+              <div class="to">-28.6%</div>
+              <div class="note">최대 낙폭<br>약 <b>22%p</b> 개선</div>
+            </div>
+            <div class="effect-row" style="background:var(--ace-sky-l);border-color:var(--ace-sky)">
+              <div class="lab">주식 하락월</div>
+              <div style="font-size:26px;font-weight:700;color:var(--ink-4)">32개월 중</div>
+              <div class="arw">▶</div>
+              <div class="to">32개월</div>
+              <div class="note">전 구간<br>채권혼합50 <b>우위</b></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="keymsg">반도체 성장성은 가져가되, 변동성은 약 절반 수준으로 완화</div>
+  <div class="src">* 자료: 한국투자신탁운용. 변동성 · MDD는 2021.01.04 ~ 2026.08.13 일간 데이터, 월간 상승 · 하락 분석은 2021.01 ~ 2026.07 기준. 주식 100% = KAP 삼성전자SK하이닉스플러스지수, 채권혼합50 = 비교지수 기준</div>
+  <div class="disc">※ 과거의 성과가 미래의 수익을 보장하지 않습니다. ※ 상기 운용구조 및 전략은 예시이며, 실제 운용에서는 당사 사정 또는 시장상황 변동 등에 따라 변경될 수 있습니다.</div>
+  <div class="pageno">11</div>
+</section>
+
+<!-- =========================== 12p. 상승 참여 · 하락 완화 =========================== -->
+<section class="slide" id="p12">
+  <img class="logo" src="__IMG_LOGO__" alt="ACE ETF">
+  <div class="cat">③ 반도체 50% + 단기 우량채권 50%</div>
+  <h1 class="title">상승은 참여하고, 하락은 완화하는 50:50 포트폴리오</h1>
+
+  <div class="graybox">
+    <div class="gb-h">반도체의 방향성은 가져가면서 등락폭은 낮추는 구조</div>
+    <ul class="gb-list">
+      <li>주식 상승월에는 반도체 상승 흐름에 약 절반 수준으로 참여</li>
+      <li>주식 하락월에는 평균 하락폭 역시 약 절반 수준으로 완화</li>
+      <li>상승 참여와 하락 완화를 함께 추구해 장기 투자 시 가격 변동에 대한 부담 축소</li>
+    </ul>
+  </div>
+
+  <div class="panel" style="height:388px">
+    <div class="cols">
+      <div class="col">
+        <div class="updown">
+          <div class="ud-h ud-up">주식 상승월 평균 수익률 &nbsp;(35개월)</div>
+          <div class="fill"><div data-chart="bars-up" style="width:100%;height:100%"></div></div>
+        </div>
+      </div>
+      <div class="col sep">
+        <div class="updown">
+          <div class="ud-h ud-dn">주식 하락월 평균 수익률 &nbsp;(32개월)</div>
+          <div class="fill"><div data-chart="bars-dn" style="width:100%;height:100%"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout">주식부분 하락월 32개월 중 32개월 모두 채권혼합50 상대 우위</div>
+  <div class="keymsg">반도체 상승은 약 절반 참여, 하락폭도 약 절반 수준으로 완화</div>
+  <div class="src">* 자료: 한국투자신탁운용, 2021.01 ~ 2026.07 월간 수익률 기준. 주식부분 = KAP 삼성전자SK하이닉스플러스지수, 채권혼합50 = 비교지수</div>
+  <div class="disc">※ 과거의 성과가 미래의 수익을 보장하지 않습니다.</div>
+  <div class="pageno">12</div>
+</section>
+
+<!-- =========================== 13p. PEER 대비 Risk-Return =========================== -->
+<section class="slide" id="p13">
+  <img class="logo" src="__IMG_LOGO__" alt="ACE ETF">
+  <div class="cat">③ 반도체 50% + 단기 우량채권 50%</div>
+  <h1 class="title">PEER 대비 높은 성과와 낮은 변동성</h1>
+
+  <div class="graybox">
+    <div class="gb-h">동일 기간 비교지수 기준 Risk-Return 경쟁력 확인</div>
+    <ul class="gb-list">
+      <li>ACE 비교지수는 동일 기간 PEER 대비 가장 높은 누적수익률 기록</li>
+      <li>연환산 수익률(CAGR) 역시 비교대상 중 가장 높은 수준</li>
+      <li>높은 성과에도 불구하고 연환산 변동성은 비교대상 중 가장 낮은 수준</li>
+    </ul>
+  </div>
+
+  <div class="panel">
+    <div class="cols">
+      <div class="col" style="flex:55">
+        <div class="pane-h">Risk-Return (연환산 변동성 vs CAGR)</div>
+        <div class="fill"><div data-chart="scatter" style="width:100%;height:100%"></div></div>
+      </div>
+      <div class="col sep" style="flex:45;justify-content:space-between">
+        <div>
+          <div class="pane-h">ACE 상대 순위</div>
+          <div class="kpis">
+            <div class="kpi"><div class="l">누적수익률</div><div class="v">1위</div></div>
+            <div class="kpi"><div class="l">CAGR</div><div class="v">1위</div></div>
+            <div class="kpi"><div class="l">변동성</div><div class="v">최저</div></div>
+          </div>
+        </div>
+        <div style="padding-bottom:6px">
+          <table class="m" style="font-size:19px">
+            <thead><tr><th>구분</th><th style="width:118px">ACE</th><th style="width:150px">PEER 범위</th></tr></thead>
+            <tbody>
+              <tr><td>누적수익률</td><td class="win">230.1%</td><td>212.1 ~ 219.7%</td></tr>
+              <tr><td>CAGR</td><td class="win">23.7%</td><td>22.5 ~ 23.0%</td></tr>
+              <tr><td>연환산 변동성</td><td class="win">20.8%</td><td>21.4 ~ 21.6%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="keymsg">동일 기간 비교지수 중 높은 수익률과 낮은 변동성을 동시에 기록</div>
+  <div class="src">* 자료: 한국투자신탁운용, 2021.01.04 ~ 2026.08.13 각 상품의 비교지수 기준. PEER는 국내 반도체 채권혼합형 ETF 비교지수(KIWOOM · KODEX · 1Q · RISE)</div>
+  <div class="disc">※ 비교지수 성과는 실제 ETF의 운용성과가 아니며, 보수 · 비용 등이 반영되지 않았습니다. 과거의 성과가 미래의 수익을 보장하지 않습니다.</div>
+  <div class="pageno">13</div>
+</section>
+
+<!-- =========================== 14p. 이런 투자자에게 적합합니다 =========================== -->
+<section class="slide" id="p14">
+  <img class="logo" src="__IMG_LOGO__" alt="ACE ETF">
+  <div class="cat">ACE 삼성전자SK하이닉스플러스채권혼합50</div>
+  <h1 class="title">이런 투자자에게 적합합니다</h1>
+
+  <div class="cards" style="top:150px;height:600px">
+    <div class="card">
+      <div class="card-num">01</div>
+      <div class="card-h">반도체는 투자하고 싶지만,<br>주식 100%는 부담스러운 투자자</div>
+      <div class="card-rule"></div>
+      <ul>
+        <li>반도체 성장 기회 + 채권 안정성</li>
+        <li>주식 100% 대비 변동성 완화</li>
+        <li>하나의 ETF로 50:50 자산배분</li>
+      </ul>
+      <div style="margin:auto 22px 0;padding-top:16px">
+        <div class="kpi" style="padding:12px 8px">
+          <div class="l">연환산 변동성</div>
+          <div class="v">41.6% <span style="color:var(--ace-blue)">▶</span> 20.8%</div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-num">02</div>
+      <div class="card-h">삼성전자 · SK하이닉스 중심으로<br>AI 반도체에 투자하고 싶은 투자자</div>
+      <div class="card-rule"></div>
+      <ul>
+        <li>삼성전자 · SK하이닉스 총 40% 고정 편입</li>
+        <li>삼성전기 Plus로 기판 · MLCC까지 투자</li>
+        <li>AI 메모리와 핵심 부품을 함께 투자</li>
+      </ul>
+      <div style="margin:auto 22px 0;padding-top:16px">
+        <div class="compbar" style="height:46px">
+          <div style="flex:40;background:var(--ace-blue-d);font-size:15px">TOP2 40%</div>
+          <div style="flex:10;background:var(--ace-blue-l);font-size:13px">10%</div>
+          <div style="flex:50;background:#C9D3DD;color:var(--ink-3);font-size:15px">채권 50%</div>
+        </div>
+        <div class="viz-cap" style="margin-top:8px">삼성전자 20% · SK하이닉스 20% · 삼성전기 10%</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-num">03</div>
+      <div class="card-h">퇴직연금 · 개인연금에서 활용할<br>반도체 상품을 찾는 투자자</div>
+      <div class="card-rule"></div>
+      <ul>
+        <li>채권혼합형 구조</li>
+        <li>퇴직연금 계좌 내 100% 투자 가능</li>
+        <li>월분배를 통한 현금흐름 기대</li>
+      </ul>
+      <div style="margin:auto 22px 0;padding-top:16px">
+        <div class="kpi" style="padding:12px 8px">
+          <div class="l">퇴직연금 계좌 투자 한도</div>
+          <div class="v">100%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="keymsg">반도체 투자 비중은 높이고 싶지만 변동성은 낮추고 싶은 투자자를 위한 채권혼합 솔루션</div>
+  <div class="disc" style="top:836px">※ 퇴직연금 계좌 내 투자 가능 여부 및 한도는 관련 법령 및 판매회사 정책에 따라 달라질 수 있습니다.<br>※ 분배금은 발생 및 금액이 고정적이지 않으며, 분배금 지급과는 별도로 보유자산이 하락할 경우 원금손실이 발생할 수 있습니다.</div>
+  <div class="pageno">14</div>
+</section>
+
+</div><!-- /deck -->
+
+<script>
+/* ============================================================
+   차트 렌더러 — 외부 라이브러리 없이 inline SVG 로 생성
+   데이터 출처: ACE 삼성전자SK하이닉스플러스채권혼합50 백업 데이터(xlsx)
+   ============================================================ */
+var DATA = __CHART_DATA__;
+
+var C = {
+  blue:'#557EAA', blueD:'#2F5C99', blueL:'#6390BF', sky:'#BEDBE8',
+  gray:'#C9D3DD', grayD:'#8D99A6', ink:'#1F1F1F', ink3:'#55606E', ink4:'#73808F',
+  grid:'#E8EBEF', coral:'#FF6155'
+};
+var FONT = '"Pretendard Variable",Pretendard,-apple-system,"Malgun Gothic",sans-serif';
+
+function el(tag, attrs, kids){
+  var s = '<' + tag;
+  for (var k in attrs){ if (attrs[k] !== null && attrs[k] !== undefined) s += ' ' + k + '="' + attrs[k] + '"'; }
+  s += '>';
+  if (kids) s += (Array.isArray(kids) ? kids.join('') : kids);
+  return s + '</' + tag + '>';
+}
+function txt(x, y, str, o){
+  o = o || {};
+  return el('text', {
+    x:x, y:y, fill:o.fill||C.ink3, 'font-size':o.size||13, 'font-weight':o.weight||500,
+    'text-anchor':o.anchor||'middle', 'font-family':FONT, 'letter-spacing':o.ls||'-0.03em',
+    transform:o.transform||null
+  }, str);
+}
+function svg(w, h, body){
+  return '<svg viewBox="0 0 '+w+' '+h+'" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">'+body+'</svg>';
+}
+
+/* ---------- 도넛 ---------- */
+function donut(w, h, segs, opts){
+  opts = opts || {};
+  var cx = opts.cx !== undefined ? opts.cx : w/2,
+      cy = opts.cy !== undefined ? opts.cy : h/2,
+      R  = opts.r  || Math.min(w, h)/2 - 6,
+      r  = opts.inner !== undefined ? opts.inner : R*0.58;
+  var total = segs.reduce(function(a,s){ return a + s.v; }, 0);
+  var ang = -Math.PI/2, out = [];
+  segs.forEach(function(s){
+    var sweep = s.v/total * Math.PI*2, a0 = ang, a1 = ang + sweep;
+    ang = a1;
+    var large = sweep > Math.PI ? 1 : 0;
+    var p = ['M', cx+R*Math.cos(a0), cy+R*Math.sin(a0),
+             'A', R, R, 0, large, 1, cx+R*Math.cos(a1), cy+R*Math.sin(a1),
+             'L', cx+r*Math.cos(a1), cy+r*Math.sin(a1),
+             'A', r, r, 0, large, 0, cx+r*Math.cos(a0), cy+r*Math.sin(a0), 'Z'].join(' ');
+    out.push(el('path', {d:p, fill:s.c, stroke:'#fff', 'stroke-width':2}));
+    if (s.label !== false && opts.labels !== false){
+      var am = (a0+a1)/2, lr = (R+r)/2;
+      out.push(txt(cx+lr*Math.cos(am), cy+lr*Math.sin(am)+5,
+        s.v + '%', {fill:s.lc||'#fff', size:opts.labelSize||15, weight:800}));
+    }
+  });
+  return out.join('');
+}
+
+/* ---------- 선 그래프 ---------- */
+function lineChart(w, h, rows, series, opts){
+  opts = opts || {};
+  var m = opts.margin || {t:14, r:16, b:34, l:52};
+  var iw = w-m.l-m.r, ih = h-m.t-m.b;
+  var all = [];
+  rows.forEach(function(r){ series.forEach(function(s){ all.push(r[s.i]); }); });
+  var mx = Math.max.apply(null, all), mn = Math.min(0, Math.min.apply(null, all));
+  var step = opts.step || 100;
+  var top = Math.ceil(mx/step)*step, bot = Math.floor(mn/step)*step;
+  var X = function(i){ return m.l + iw*i/(rows.length-1); };
+  var Y = function(v){ return m.t + ih*(1-(v-bot)/(top-bot)); };
+  var o = [];
+  for (var g = bot; g <= top; g += step){
+    o.push(el('line', {x1:m.l, y1:Y(g), x2:m.l+iw, y2:Y(g), stroke:C.grid, 'stroke-width':1}));
+    o.push(txt(m.l-9, Y(g)+4, g+'%', {anchor:'end', size:12.5, fill:C.ink4}));
+  }
+  var lastYear = null;
+  rows.forEach(function(r, i){
+    var y = r[0].slice(0,4);
+    if (y !== lastYear && r[0].slice(5) === '01'){
+      lastYear = y;
+      o.push(el('line', {x1:X(i), y1:m.t, x2:X(i), y2:m.t+ih, stroke:C.grid, 'stroke-width':1}));
+      o.push(txt(X(i), h-13, y, {size:12.5, fill:C.ink4}));
+    }
+  });
+  series.forEach(function(s){
+    var d = rows.map(function(r,i){ return (i?'L':'M') + X(i).toFixed(1) + ' ' + Y(r[s.i]).toFixed(1); }).join(' ');
+    o.push(el('path', {d:d, fill:'none', stroke:s.c, 'stroke-width':s.w||2.4,
+      'stroke-linejoin':'round', 'stroke-linecap':'round', 'stroke-dasharray':s.dash||null}));
+  });
+  /* 끝점 라벨 */
+  series.forEach(function(s){
+    var last = rows[rows.length-1];
+    o.push(el('circle', {cx:X(rows.length-1), cy:Y(last[s.i]), r:4, fill:s.c}));
+  });
+  /* 범례 */
+  var lx = m.l+14, ly = m.t+16;
+  series.forEach(function(s, k){
+    o.push(el('line', {x1:lx, y1:ly+k*22, x2:lx+24, y2:ly+k*22, stroke:s.c, 'stroke-width':3.2,
+      'stroke-dasharray':s.dash||null}));
+    o.push(txt(lx+31, ly+k*22+5, s.n, {anchor:'start', size:14, weight:700, fill:s.c}));
+  });
+  return svg(w, h, o.join(''));
+}
+
+/* ---------- 세로 막대 (2계열 비교) ---------- */
+function twoBars(w, h, items, opts){
+  opts = opts || {};
+  var m = {t:16, r:20, b:52, l:20};
+  var iw = w-m.l-m.r, ih = h-m.t-m.b;
+  var maxAbs = Math.max.apply(null, items.map(function(d){ return Math.abs(d.v); }));
+  var scale = ih/(maxAbs*1.28);
+  var bw = Math.min(126, iw/(items.length*1.9));
+  var gap = (iw - bw*items.length)/(items.length+1);
+  var base = opts.neg ? m.t + 46 : m.t + ih;
+  var o = [];
+  items.forEach(function(d, i){
+    var x = m.l + gap*(i+1) + bw*i;
+    var len = Math.abs(d.v)*scale;
+    var y = opts.neg ? base : base - len;
+    o.push(el('rect', {x:x, y:y, width:bw, height:len, rx:4, fill:d.c}));
+    /* 값 라벨: 상승형은 막대 위, 하락형은 막대 아래 */
+    o.push(txt(x+bw/2, opts.neg ? y+len+32 : y-13,
+      (d.v>0?'+':'') + d.v.toFixed(1) + '%', {size:29, weight:800, fill:d.c}));
+    /* 항목명: 상승형은 하단, 하락형은 0선 위쪽에 배치해 값 라벨과 겹치지 않게 함 */
+    var ny = opts.neg ? base-24 : h-26, sy = opts.neg ? base-7 : h-8;
+    o.push(txt(x+bw/2, ny, d.n, {size:17, weight:700, fill:C.ink3}));
+    if (d.sub) o.push(txt(x+bw/2, sy, d.sub, {size:13.5, fill:C.ink4}));
+  });
+  o.push(el('line', {x1:m.l, y1:base, x2:w-m.r, y2:base, stroke:'#B7BEC7', 'stroke-width':1}));
+  return svg(w, h, o.join(''));
+}
+
+/* ---------- Risk-Return 산점도 ---------- */
+function scatter(w, h, pts){
+  var m = {t:18, r:26, b:46, l:80};
+  var iw = w-m.l-m.r, ih = h-m.t-m.b;
+  var xs = pts.map(function(p){ return p.x; }), ys = pts.map(function(p){ return p.y; });
+  var gs = 0.25; /* 격자 간격(%p) */
+  var x0 = Math.floor((Math.min.apply(null,xs)-0.2)/gs)*gs, x1 = Math.ceil((Math.max.apply(null,xs)+0.2)/gs)*gs;
+  var y0 = Math.floor((Math.min.apply(null,ys)-0.3)/gs)*gs, y1 = Math.ceil((Math.max.apply(null,ys)+0.3)/gs)*gs;
+  var X = function(v){ return m.l + iw*(v-x0)/(x1-x0); };
+  var Y = function(v){ return m.t + ih*(1-(v-y0)/(y1-y0)); };
+  var o = [];
+  for (var gx = x0; gx <= x1+1e-9; gx += gs){
+    o.push(el('line', {x1:X(gx), y1:m.t, x2:X(gx), y2:m.t+ih, stroke:C.grid, 'stroke-width':1}));
+    o.push(txt(X(gx), m.t+ih+20, gx.toFixed(2)+'%', {size:12, fill:C.ink4}));
+  }
+  for (var gy = y0; gy <= y1+1e-9; gy += gs){
+    o.push(el('line', {x1:m.l, y1:Y(gy), x2:m.l+iw, y2:Y(gy), stroke:C.grid, 'stroke-width':1}));
+    o.push(txt(m.l-9, Y(gy)+4, gy.toFixed(2)+'%', {anchor:'end', size:12, fill:C.ink4}));
+  }
+  o.push(txt(m.l+iw/2, h-8, '연환산 변동성 (낮을수록 우위) →', {size:13.5, weight:700, fill:C.ink3}));
+  o.push(txt(17, m.t+ih/2, '↑ CAGR', {size:13.5, weight:700, fill:C.ink3,
+    transform:'rotate(-90 17 '+(m.t+ih/2)+')'}));
+  pts.forEach(function(p){
+    var ace = p.ace;
+    o.push(el('circle', {cx:X(p.x), cy:Y(p.y), r:ace?11:7.5, fill:ace?C.blue:'#B7BEC7',
+      stroke:'#fff', 'stroke-width':ace?2.5:1.5}));
+    if (p.n) o.push(txt(X(p.x)+(p.dx||0), Y(p.y)+(p.dy||-19), p.n,
+      {size:ace?16.5:13.5, weight:ace?800:600, fill:ace?C.blueD:C.ink4}));
+  });
+  /* 좌표가 거의 겹치는 PEER 를 하나의 묶음 라벨로 표기 */
+  (pts.clusters||[]).forEach(function(cl){
+    o.push(txt(X(cl.x)+(cl.dx||0), Y(cl.y)+(cl.dy||0), cl.n, {size:14, weight:700, fill:C.ink4}));
+  });
+  return svg(w, h, o.join(''));
+}
+
+/* ---------- 렌더 ---------- */
+function render(){
+  document.querySelectorAll('[data-chart]').forEach(function(node){
+    var kind = node.getAttribute('data-chart');
+
+    if (kind === 'donut-mini'){
+      node.innerHTML = svg(140, 140, donut(140, 140, [
+        {v:50, c:C.blue}, {v:50, c:C.gray, lc:C.ink3}
+      ], {r:56, inner:33, labelSize:16}));
+    }
+
+    else if (kind === 'donut-segments'){
+      var seg = [
+        {n:'컴포넌트(MLCC 등)', v:43.9, c:C.blue},
+        {n:'광학솔루션', v:33.5, c:C.gray, lc:C.ink3},
+        {n:'패키지솔루션(FC-BGA)', v:22.6, c:C.blueD}
+      ];
+      var body = donut(300, 232, seg, {cx:150, cy:112, r:96, inner:46, labelSize:16});
+      body += txt(150, 106, '삼성전기', {size:15, weight:700, fill:C.ink3});
+      body += txt(150, 128, '1Q26', {size:14, fill:C.ink4});
+      seg.forEach(function(s, i){
+        var y = 258 + i*25;
+        body += el('rect', {x:16, y:y-11, width:13, height:13, rx:3, fill:s.c});
+        body += txt(36, y, s.n, {anchor:'start', size:14.5, weight:600, fill:C.ink3});
+        body += txt(292, y, s.v.toFixed(1)+'%', {anchor:'end', size:14.5, weight:800, fill:s.c===C.gray?C.ink3:s.c});
+      });
+      node.innerHTML = svg(308, 336, body);
+    }
+
+    else if (kind === 'donut-5050'){
+      var seg2 = [
+        {n:'삼성전자', v:20, c:C.blueD},
+        {n:'SK하이닉스', v:20, c:C.blue},
+        {n:'삼성전기', v:10, c:C.blueL},
+        {n:'국내 단기 우량채권', v:50, c:C.gray, lc:C.ink3}
+      ];
+      var b = donut(320, 250, seg2, {cx:160, cy:120, r:104, inner:62, labelSize:16});
+      b += txt(160, 112, '반도체 주식 50%', {size:15.5, weight:800, fill:C.blueD});
+      b += txt(160, 134, '+ 채권 50%', {size:15.5, weight:800, fill:C.ink3});
+      seg2.forEach(function(s, i){
+        var y = 272 + i*24;
+        b += el('rect', {x:20, y:y-11, width:13, height:13, rx:3, fill:s.c});
+        b += txt(40, y, s.n, {anchor:'start', size:14.5, weight:600, fill:C.ink3});
+        b += txt(300, y, s.v+'%', {anchor:'end', size:14.5, weight:800, fill:s.c===C.gray?C.ink3:s.c});
+      });
+      node.innerHTML = svg(320, 376, b);
+    }
+
+    else if (kind === 'plus-line'){
+      node.innerHTML = lineChart(760, 352, DATA.plus_monthly, [
+        {i:1, c:C.blue,  n:'TOP2 + 삼성전기 (40:40:20)', w:2.6},
+        {i:2, c:'#9AA5B1', n:'TOP2 (50:50)', w:2.2, dash:'6 4'}
+      ], {step:200});
+    }
+
+    else if (kind === 'bars-up'){
+      node.innerHTML = twoBars(560, 262, [
+        {n:'주식부분', sub:'반도체 주식 100%', v:13.8, c:'#9AA5B1'},
+        {n:'채권혼합50', sub:'주식 50% + 채권 50%', v:6.7, c:C.blue}
+      ]);
+    }
+
+    else if (kind === 'bars-dn'){
+      node.innerHTML = twoBars(560, 262, [
+        {n:'주식부분', sub:'반도체 주식 100%', v:-6.3, c:'#9AA5B1'},
+        {n:'채권혼합50', sub:'주식 50% + 채권 50%', v:-3.0, c:C.blue}
+      ], {neg:true});
+    }
+
+    else if (kind === 'scatter'){
+      var p = DATA.peer, n = DATA.peer_names, pts = [];
+      for (var i = 0; i < n.length; i++){
+        pts.push({
+          n: n[i] === 'ACE' ? 'ACE 비교지수' : n[i],
+          x: p.vol[i]*100, y: p.cagr[i]*100,
+          ace: n[i] === 'ACE'
+        });
+      }
+      /* KIWOOM · 1Q · RISE 는 변동성 · CAGR 이 사실상 동일해 한 점으로 겹치므로 묶음 라벨로 표기 */
+      var grouped = ['KIWOOM', '1Q', 'RISE'], gx = 0, gy = 0, gn = 0;
+      pts.forEach(function(q){
+        if (grouped.indexOf(q.n) >= 0){ gx += q.x; gy += q.y; gn++; q.n = ''; }
+        else if (q.n === 'KODEX'){ q.dy = 26; }
+      });
+      pts.clusters = [{n:'KIWOOM · 1Q · RISE', x:gx/gn, y:gy/gn, dy:-18}];
+      node.innerHTML = scatter(640, 348, pts);
+    }
+  });
+}
+render();
+</script>
+</body>
+</html>
