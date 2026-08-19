@@ -240,74 +240,65 @@ table.m tr:last-child td{border-bottom:0}
 .ud-up{background:var(--ace-sky-l);color:var(--ace-blue-d)}
 .ud-dn{background:#FDEFEE;color:#C0392B}
 /* 14p 퇴직연금 활용 예시 */
-.use-wrap{display:grid;grid-template-columns:1fr 396px;height:100%}
-.use-left{padding:16px 22px 14px;display:flex;flex-direction:column;justify-content:space-between}
-.use-case{display:flex;flex-direction:column}
-.uc-h{display:flex;align-items:center;gap:10px;margin-bottom:20px}
+.ucase-row{display:flex;gap:26px;margin-bottom:11px}
+.ucase{flex:1;min-width:0}
+.uc2-h{display:flex;align-items:center;gap:9px;margin-bottom:9px}
 .uc-no{
-  width:26px;height:26px;border-radius:50%;background:var(--ace-blue-d);color:#fff;
-  display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;flex:0 0 auto;
+  width:24px;height:24px;border-radius:50%;background:var(--ace-blue-d);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;flex:0 0 auto;
 }
-.uc-t{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.04em;white-space:nowrap}
-.uc-d{font-size:15.5px;color:var(--ink-4);letter-spacing:-.035em}
+.uc2-h b{font-size:20px;font-weight:800;color:var(--ink);letter-spacing:-.04em}
+.uc-d{font-size:15px;color:var(--ink-4);letter-spacing:-.04em;white-space:nowrap}
 .uc-badge{
-  margin-left:auto;flex:0 0 auto;border-radius:6px;padding:5px 13px;
-  background:#F1F3F5;color:var(--ink-3);font-size:15px;font-weight:700;letter-spacing:-.03em;
+  margin-left:auto;flex:0 0 auto;border-radius:6px;padding:4px 12px;
+  background:#F1F3F5;color:var(--ink-3);font-size:14px;font-weight:700;letter-spacing:-.03em;white-space:nowrap;
 }
-.uc-badge b{font-size:18px;font-weight:800}
+.uc-badge b{font-size:17px;font-weight:800}
 .uc-badge.on{background:var(--ace-sky-l);color:var(--ace-blue-d)}
 
-.alloc{display:flex;flex-direction:column}
-/* 상단 브래킷 — 어느 상품이 어디까지 덮는지 / 실제 반도체 노출 구간 */
-.brk{position:relative;height:19px;border:1px solid var(--gray-line);border-bottom:0;border-radius:5px 5px 0 0}
-.brk.r{margin-left:auto}
-.brk span{
-  position:absolute;top:0;left:50%;transform:translate(-50%,-52%);white-space:nowrap;
-  background:#fff;padding:0 9px;font-size:13.5px;font-weight:700;color:var(--ink-3);letter-spacing:-.035em;
-}
-.brk.risk{border-color:var(--ace-coral);margin-top:9px}
-.brk.risk span{color:var(--ace-coral)}
-
-.abar{position:relative;display:flex;height:50px;border-radius:6px;overflow:visible}
+.abar{position:relative;display:flex;height:38px;border-radius:6px}
 .abar .seg{
   display:flex;align-items:center;justify-content:center;text-align:center;
-  font-size:15.5px;font-weight:700;letter-spacing:-.04em;white-space:nowrap;overflow:hidden;padding:0 4px;
+  font-size:15px;font-weight:700;letter-spacing:-.04em;white-space:nowrap;overflow:hidden;padding:0 3px;
 }
-.abar .seg.sm{font-size:13px}
+.abar .seg.sm{font-size:12.5px}
 .abar .seg:first-child{border-radius:6px 0 0 6px}
 .abar .seg:last-child{border-radius:0 6px 6px 0}
 .seg.s1{background:#BFD3E6;color:var(--ace-blue-d)}
 .seg.s2{background:var(--ace-blue-d);color:#fff}
-.seg.s3{background:var(--ace-blue);color:#fff}
 .seg.sb{background:#F3DCD6;color:#8C5245}
+/* 실제 반도체 투자 구간 */
 .riskbox{
-  position:absolute;top:-3px;bottom:-3px;left:-3px;
-  border:2px dashed var(--ace-coral);border-radius:7px;pointer-events:none;
+  position:absolute;top:-4px;bottom:-4px;left:-4px;
+  border:2px dashed var(--ace-coral);border-radius:8px;pointer-events:none;
 }
-.acap{display:flex;margin-top:7px}
-.acap>div{
-  padding:0 4px;text-align:center;font-size:12.5px;color:var(--ink-4);
-  letter-spacing:-.045em;line-height:1.35;
-}
-.acap{min-height:34px}
 
-.use-right{border-left:1px solid var(--gray-line);padding:16px 20px 14px;display:flex;flex-direction:column}
-.ur-h{font-size:16px;font-weight:600;color:var(--ink-3);letter-spacing:-.035em;margin-bottom:10px;text-align:center}
-.ur-h b{font-weight:800;color:var(--ink)}
-table.lt{width:100%;border-collapse:collapse;font-size:16px;letter-spacing:-.035em}
-table.lt th{
-  padding:7px 6px;font-size:14.5px;font-weight:700;color:var(--ink-4);
-  border-bottom:2px solid var(--ace-blue);text-align:center;
+/* 조합별 실효 비중 표 */
+table.wt{width:100%;border-collapse:collapse;font-size:16.5px;letter-spacing:-.035em;table-layout:fixed}
+table.wt col{}
+table.wt th,table.wt td{text-align:center}
+table.wt .lbl{width:250px;text-align:left}
+table.wt tr.grp th{
+  padding:5px 8px;font-size:14.5px;font-weight:700;color:var(--ink-4);
+  background:#F4F6F8;border:1px solid #E4E8EC;letter-spacing:-.035em;
 }
-table.lt th:first-child{text-align:left}
-table.lt td{padding:7.5px 6px;text-align:center;border-bottom:1px solid #EDF0F3;color:var(--ink-3);font-weight:600}
-table.lt td:first-child{text-align:left;color:var(--ink-2);font-weight:700}
-table.lt td.up{color:var(--ace-blue-d);font-weight:800}
-table.lt td.na{color:#C3CAD2}
-table.lt tr.sub td{border-top:1px solid var(--gray-line);background:#FAFBFC}
-table.lt tr.tot td{background:var(--ace-sky-l);font-weight:800;color:var(--ace-blue-d);font-size:17px}
-table.lt tr.tot td:first-child{color:var(--ace-blue-d)}
-table.lt tr.bond td{border-bottom:0}
+table.wt tr.grp th.hi{background:var(--ace-sky-l);color:var(--ace-blue-d)}
+table.wt tr.grp th.lbl{background:#fff;border-left:0;border-top:0;font-size:15px;color:var(--ink-2);font-weight:800;vertical-align:bottom;padding-bottom:9px}
+table.wt tr.sub th{
+  padding:4px 6px 6px;font-size:14.5px;font-weight:700;color:var(--ink-3);
+  border:1px solid #E4E8EC;border-top:0;line-height:1.25;
+}
+table.wt tr.sub th.hi{background:#F7FAFC;color:var(--ace-blue-d)}
+table.wt tr.sub th span{display:block;font-size:11.5px;font-weight:600;color:#9AA5B1;margin-top:2px;letter-spacing:-.05em}
+table.wt tbody td{padding:5px 6px;border:1px solid #EDF0F3;color:var(--ink-3);font-weight:600}
+table.wt tbody td.lbl{color:var(--ink-2);font-weight:700;border-left:0;padding-left:2px}
+table.wt tbody td.hi{background:#F7FAFC;color:var(--ace-blue-d);font-weight:800}
+table.wt td.na{color:#C3CAD2;font-weight:500}
+table.wt tr.sum td{border-top:1.5px solid var(--gray-line);background:#FAFBFC;font-weight:800}
+table.wt tr.sum td.hi{background:#EDF3F9}
+table.wt tr.tot td{background:#F4F6F8;font-weight:800;color:var(--ink-2)}
+table.wt tr.tot td.hi{background:var(--ace-blue-d);color:#fff}
+table.wt tr.tot td.lbl{background:#fff;color:var(--ink-2)}
 
 /* 12p 국면 비교 그리드 — 3열(국면 / 막대 / 비율) 고정 정렬 */
 .ph-head,.ph{display:grid;grid-template-columns:268px 1fr 196px;align-items:center}
@@ -973,88 +964,75 @@ table.lt tr.bond td{border-bottom:0}
   <h1 class="title">퇴직연금에서 반도체 비중을 고르는 두 가지 방법</h1>
 
   <div class="graybox">
-    <div class="gb-h">투자 성향에 따라 반도체 비중을 50%에서 85%까지</div>
+    <div class="gb-h">채권혼합50 하나로 50%, 반도체 시리즈를 더하면 85%까지</div>
     <ul class="gb-list">
       <li><b>안정형</b> — 채권혼합50 하나로 반도체 50% + 단기채권 50%, 계좌 전액 투자 가능</li>
-      <li><b>공격형</b> — 반도체 주식형 ETF 70%에 채권혼합50 30%를 더해 반도체 비중을 <b>85%</b>까지 확대</li>
-      <li>어느 쪽을 택하든 <b>삼성전자 · SK하이닉스</b>가 포트폴리오의 중심 (40% → 47%)</li>
+      <li><b>공격형</b> — 반도체 주식형 ETF 70% + 채권혼합50 30% → 반도체 비중 <b>85%</b></li>
+      <li>공격형은 어떤 조합이든 반도체 85%로 같고, <b>국내 대형주 실효 비중만 67.5% ~ 78.0%</b>로 달라짐</li>
     </ul>
   </div>
 
-  <div class="panel" style="padding:0;overflow:hidden">
-    <div class="use-wrap">
-      <!-- 좌: 계좌 구성 예시 -->
-      <div class="use-left">
-        <!-- 1 안정형 -->
-        <div class="use-case">
-          <div class="uc-h">
-            <span class="uc-no">1</span>
-            <span class="uc-t">안정형 투자자</span>
-            <span class="uc-d">반도체 50% + 단기채권 50%, 마음 편한 투자</span>
-            <span class="uc-badge">반도체 <b>50%</b></span>
-          </div>
-          <div class="alloc">
-            <div class="brk etf" style="width:100%"><span>ACE 삼성전자SK하이닉스플러스채권혼합50 ETF &nbsp;100%</span></div>
-            <div class="brk risk" style="width:50%"><span>실제 반도체 투자 비중 50%</span></div>
-            <div class="abar">
-              <div class="seg s1" style="flex:50">삼성전자 · SK하이닉스 · 삼성전기 &nbsp;50%</div>
-              <div class="seg sb" style="flex:50">단기채권 &nbsp;50%</div>
-              <div class="riskbox" style="width:50%"></div>
-            </div>
-            <div class="acap"><div style="flex:50">삼성전자 20 · SK하이닉스 20 · 삼성전기 10</div><div style="flex:50">국고채 · 통안채 등 단기 우량채권</div></div>
-          </div>
+  <div class="panel" style="padding:15px 20px 14px">
+    <!-- 계좌 구성 -->
+    <div class="ucase-row">
+      <div class="ucase">
+        <div class="uc2-h">
+          <span class="uc-no">1</span><b>안정형</b>
+          <span class="uc-d">채권혼합50 ETF 100%</span>
+          <span class="uc-badge">반도체 <b>50%</b></span>
         </div>
-
-        <!-- 2 공격형 -->
-        <div class="use-case">
-          <div class="uc-h">
-            <span class="uc-no">2</span>
-            <span class="uc-t">공격형 투자자</span>
-            <span class="uc-d">위험자산 한도 70%를 채우고 채권혼합으로 한 번 더</span>
-            <span class="uc-badge on">반도체 <b>85%</b></span>
-          </div>
-          <div class="alloc">
-            <div class="brk etf r" style="width:30%"><span>ACE 채권혼합50 ETF &nbsp;30%</span></div>
-            <div class="brk risk" style="width:85%"><span>실제 반도체 투자 비중 85%</span></div>
-            <div class="abar">
-              <div class="seg s2" style="flex:35">ACE AI반도체TOP3+ &nbsp;35%</div>
-              <div class="seg s3" style="flex:35">ACE K반도체TOP2+ &nbsp;35%</div>
-              <div class="seg s1 sm" style="flex:15">반도체 15%</div>
-              <div class="seg sb sm" style="flex:15">채권 15%</div>
-              <div class="riskbox" style="width:85%"></div>
-            </div>
-            <div class="acap">
-              <div style="flex:35">삼성전자 25 · SK하이닉스 25 · 한미반도체 25</div>
-              <div style="flex:35">삼성전자 25 · SK하이닉스 25 · SK스퀘어 20 · 삼성전기 20</div>
-              <div style="flex:30">삼성전자 20 · SK하이닉스 20 · 삼성전기 10 · 채권 50</div>
-            </div>
-          </div>
+        <div class="abar">
+          <div class="seg s1" style="flex:50">반도체 주식 50%</div>
+          <div class="seg sb" style="flex:50">단기채권 50%</div>
+          <div class="riskbox" style="width:50%"></div>
         </div>
       </div>
-
-      <!-- 우: 종목별 실효 비중 -->
-      <div class="use-right">
-        <div class="ur-h">계좌 전체 기준 <b>종목별 실효 비중</b></div>
-        <table class="lt">
-          <thead><tr><th>국내 반도체 종목</th><th>안정형</th><th>공격형</th></tr></thead>
-          <tbody>
-            <tr><td>삼성전자</td><td>20.0%</td><td class="up">23.5%</td></tr>
-            <tr><td>SK하이닉스</td><td>20.0%</td><td class="up">23.5%</td></tr>
-            <tr><td>삼성전기</td><td>10.0%</td><td>10.0%</td></tr>
-            <tr><td>한미반도체</td><td class="na">–</td><td class="up">8.8%</td></tr>
-            <tr><td>SK스퀘어</td><td class="na">–</td><td class="up">7.0%</td></tr>
-            <tr><td>기타 반도체</td><td class="na">–</td><td class="up">12.3%</td></tr>
-            <tr class="sub"><td>대형주 5종 소계</td><td>50.0%</td><td class="up">72.8%</td></tr>
-            <tr class="tot"><td>반도체 합계</td><td>50.0%</td><td class="up">85.0%</td></tr>
-            <tr class="bond"><td>단기 우량채권</td><td>50.0%</td><td>15.0%</td></tr>
-          </tbody>
-        </table>
+      <div class="ucase">
+        <div class="uc2-h">
+          <span class="uc-no">2</span><b>공격형</b>
+          <span class="uc-d">반도체 주식형 70% + 채권혼합50 30%</span>
+          <span class="uc-badge on">반도체 <b>85%</b></span>
+        </div>
+        <div class="abar">
+          <div class="seg s2" style="flex:70">반도체 주식형 ETF 70%</div>
+          <div class="seg s1 sm" style="flex:15">반도체 15%</div>
+          <div class="seg sb sm" style="flex:15">채권 15%</div>
+          <div class="riskbox" style="width:85%"></div>
+        </div>
       </div>
     </div>
+
+    <!-- 조합별 국내 반도체 종목 실효 비중 -->
+    <table class="wt">
+      <thead>
+        <tr class="grp">
+          <th rowspan="2" class="lbl">국내 반도체 종목</th>
+          <th colspan="3">상품별 구성 &nbsp;·&nbsp; 각 ETF를 100% 보유할 경우</th>
+          <th colspan="3" class="hi">조합 예시 &nbsp;·&nbsp; 계좌 100% 기준 실효 비중</th>
+        </tr>
+        <tr class="sub">
+          <th>채권혼합50</th>
+          <th>K반도체TOP2+</th>
+          <th>AI반도체TOP3+</th>
+          <th class="hi">3종 분산<span>혼합50 30 · K 35 · AI 35</span></th>
+          <th class="hi">K반도체 집중<span>혼합50 30 · K 70</span></th>
+          <th class="hi">AI반도체 집중<span>혼합50 30 · AI 70</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="lbl">삼성전자</td><td>20%</td><td>25%</td><td>25%</td><td class="hi">23.5%</td><td class="hi">23.5%</td><td class="hi">23.5%</td></tr>
+        <tr><td class="lbl">SK하이닉스</td><td>20%</td><td>25%</td><td>25%</td><td class="hi">23.5%</td><td class="hi">23.5%</td><td class="hi">23.5%</td></tr>
+        <tr><td class="lbl">삼성전기</td><td>10%</td><td>20%</td><td class="na">–</td><td class="hi">10.0%</td><td class="hi">17.0%</td><td class="hi">3.0%</td></tr>
+        <tr><td class="lbl">SK스퀘어</td><td class="na">–</td><td>20%</td><td class="na">–</td><td class="hi">7.0%</td><td class="hi">14.0%</td><td class="hi na">–</td></tr>
+        <tr><td class="lbl">한미반도체</td><td class="na">–</td><td class="na">–</td><td>25%</td><td class="hi">8.8%</td><td class="hi na">–</td><td class="hi">17.5%</td></tr>
+        <tr class="sum"><td class="lbl">국내 반도체 대형주 합계</td><td>50%</td><td>90%</td><td>75%</td><td class="hi">72.8%</td><td class="hi">78.0%</td><td class="hi">67.5%</td></tr>
+        <tr class="tot"><td class="lbl">반도체 총 노출</td><td>50%</td><td>100%</td><td>100%</td><td class="hi">85.0%</td><td class="hi">85.0%</td><td class="hi">85.0%</td></tr>
+      </tbody>
+    </table>
   </div>
 
-  <div class="keymsg">퇴직연금 한 계좌에서 반도체 비중을 50%부터 85%까지 설계</div>
-  <div class="src">* 각 상품 기초지수 방법론상 목표 비중 기준 예시(막대 아래 숫자는 ETF 내 종목 비중). 공격형은 주식형 70%를 두 상품에 균등 배분(각 35%) 가정. 실제 비중은 시장상황에 따라 변동.</div>
+  <div class="keymsg">반도체 85%는 그대로, 국내 대형주 비중은 조합으로 조절</div>
+  <div class="src">* 각 상품 기초지수 방법론상 목표 비중 기준 예시. 표의 나머지 비중은 채권혼합50 = 단기채권 50%, K반도체TOP2+ = 소형주 10%, AI반도체TOP3+ = 기타 25%. 실제 비중은 시장상황에 따라 변동.</div>
   <div class="disc">※ 퇴직연금 계좌 내 투자 가능 여부 및 위험자산 한도는 관련 법령 및 판매회사 정책에 따라 달라질 수 있습니다. ※ 상기 자산배분 예시는 투자권유가 아닙니다.</div>
   <div class="pageno">14</div>
 </section>
