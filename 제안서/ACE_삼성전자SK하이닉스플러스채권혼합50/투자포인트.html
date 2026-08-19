@@ -239,6 +239,76 @@ table.m tr:last-child td{border-bottom:0}
 }
 .ud-up{background:var(--ace-sky-l);color:var(--ace-blue-d)}
 .ud-dn{background:#FDEFEE;color:#C0392B}
+/* 14p 퇴직연금 활용 예시 */
+.use-wrap{display:grid;grid-template-columns:1fr 396px;height:100%}
+.use-left{padding:16px 22px 14px;display:flex;flex-direction:column;justify-content:space-between}
+.use-case{display:flex;flex-direction:column}
+.uc-h{display:flex;align-items:center;gap:10px;margin-bottom:20px}
+.uc-no{
+  width:26px;height:26px;border-radius:50%;background:var(--ace-blue-d);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;flex:0 0 auto;
+}
+.uc-t{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.04em;white-space:nowrap}
+.uc-d{font-size:15.5px;color:var(--ink-4);letter-spacing:-.035em}
+.uc-badge{
+  margin-left:auto;flex:0 0 auto;border-radius:6px;padding:5px 13px;
+  background:#F1F3F5;color:var(--ink-3);font-size:15px;font-weight:700;letter-spacing:-.03em;
+}
+.uc-badge b{font-size:18px;font-weight:800}
+.uc-badge.on{background:var(--ace-sky-l);color:var(--ace-blue-d)}
+
+.alloc{display:flex;flex-direction:column}
+/* 상단 브래킷 — 어느 상품이 어디까지 덮는지 / 실제 반도체 노출 구간 */
+.brk{position:relative;height:19px;border:1px solid var(--gray-line);border-bottom:0;border-radius:5px 5px 0 0}
+.brk.r{margin-left:auto}
+.brk span{
+  position:absolute;top:0;left:50%;transform:translate(-50%,-52%);white-space:nowrap;
+  background:#fff;padding:0 9px;font-size:13.5px;font-weight:700;color:var(--ink-3);letter-spacing:-.035em;
+}
+.brk.risk{border-color:var(--ace-coral);margin-top:9px}
+.brk.risk span{color:var(--ace-coral)}
+
+.abar{position:relative;display:flex;height:50px;border-radius:6px;overflow:visible}
+.abar .seg{
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  font-size:15.5px;font-weight:700;letter-spacing:-.04em;white-space:nowrap;overflow:hidden;padding:0 4px;
+}
+.abar .seg.sm{font-size:13px}
+.abar .seg:first-child{border-radius:6px 0 0 6px}
+.abar .seg:last-child{border-radius:0 6px 6px 0}
+.seg.s1{background:#BFD3E6;color:var(--ace-blue-d)}
+.seg.s2{background:var(--ace-blue-d);color:#fff}
+.seg.s3{background:var(--ace-blue);color:#fff}
+.seg.sb{background:#F3DCD6;color:#8C5245}
+.riskbox{
+  position:absolute;top:-3px;bottom:-3px;left:-3px;
+  border:2px dashed var(--ace-coral);border-radius:7px;pointer-events:none;
+}
+.acap{display:flex;margin-top:7px}
+.acap>div{
+  padding:0 4px;text-align:center;font-size:12.5px;color:var(--ink-4);
+  letter-spacing:-.045em;line-height:1.35;
+}
+.acap{min-height:34px}
+
+.use-right{border-left:1px solid var(--gray-line);padding:16px 20px 14px;display:flex;flex-direction:column}
+.ur-h{font-size:16px;font-weight:600;color:var(--ink-3);letter-spacing:-.035em;margin-bottom:10px;text-align:center}
+.ur-h b{font-weight:800;color:var(--ink)}
+table.lt{width:100%;border-collapse:collapse;font-size:16px;letter-spacing:-.035em}
+table.lt th{
+  padding:7px 6px;font-size:14.5px;font-weight:700;color:var(--ink-4);
+  border-bottom:2px solid var(--ace-blue);text-align:center;
+}
+table.lt th:first-child{text-align:left}
+table.lt td{padding:7.5px 6px;text-align:center;border-bottom:1px solid #EDF0F3;color:var(--ink-3);font-weight:600}
+table.lt td:first-child{text-align:left;color:var(--ink-2);font-weight:700}
+table.lt td.up{color:var(--ace-blue-d);font-weight:800}
+table.lt td.na{color:#C3CAD2}
+table.lt tr.sub td{border-top:1px solid var(--gray-line);background:#FAFBFC}
+table.lt tr.tot td{background:var(--ace-sky-l);font-weight:800;color:var(--ace-blue-d);font-size:17px}
+table.lt tr.tot td:first-child{color:var(--ace-blue-d)}
+table.lt tr.bond td{border-bottom:0}
+
 /* 12p 국면 비교 그리드 — 3열(국면 / 막대 / 비율) 고정 정렬 */
 .ph-head,.ph{display:grid;grid-template-columns:268px 1fr 196px;align-items:center}
 .ph-head{
@@ -896,8 +966,101 @@ table.m tr:last-child td{border-bottom:0}
   <div class="pageno">13</div>
 </section>
 
-<!-- =========================== 14p. 이런 투자자에게 적합합니다 =========================== -->
+<!-- =========================== 14p. 퇴직연금 활용 예시 =========================== -->
 <section class="slide" id="p14">
+  <img class="logo" src="data:image/png;base64,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" alt="ACE ETF">
+  <div class="cat">ACE 국내 반도체 ETF 시리즈 활용</div>
+  <h1 class="title">퇴직연금에서 반도체 비중을 고르는 두 가지 방법</h1>
+
+  <div class="graybox">
+    <div class="gb-h">투자 성향에 따라 반도체 비중을 50%에서 85%까지</div>
+    <ul class="gb-list">
+      <li><b>안정형</b> — 채권혼합50 하나로 반도체 50% + 단기채권 50%, 계좌 전액 투자 가능</li>
+      <li><b>공격형</b> — 반도체 주식형 ETF 70%에 채권혼합50 30%를 더해 반도체 비중을 <b>85%</b>까지 확대</li>
+      <li>어느 쪽을 택하든 <b>삼성전자 · SK하이닉스</b>가 포트폴리오의 중심 (40% → 47%)</li>
+    </ul>
+  </div>
+
+  <div class="panel" style="padding:0;overflow:hidden">
+    <div class="use-wrap">
+      <!-- 좌: 계좌 구성 예시 -->
+      <div class="use-left">
+        <!-- 1 안정형 -->
+        <div class="use-case">
+          <div class="uc-h">
+            <span class="uc-no">1</span>
+            <span class="uc-t">안정형 투자자</span>
+            <span class="uc-d">반도체 50% + 단기채권 50%, 마음 편한 투자</span>
+            <span class="uc-badge">반도체 <b>50%</b></span>
+          </div>
+          <div class="alloc">
+            <div class="brk etf" style="width:100%"><span>ACE 삼성전자SK하이닉스플러스채권혼합50 ETF &nbsp;100%</span></div>
+            <div class="brk risk" style="width:50%"><span>실제 반도체 투자 비중 50%</span></div>
+            <div class="abar">
+              <div class="seg s1" style="flex:50">삼성전자 · SK하이닉스 · 삼성전기 &nbsp;50%</div>
+              <div class="seg sb" style="flex:50">단기채권 &nbsp;50%</div>
+              <div class="riskbox" style="width:50%"></div>
+            </div>
+            <div class="acap"><div style="flex:50">삼성전자 20 · SK하이닉스 20 · 삼성전기 10</div><div style="flex:50">국고채 · 통안채 등 단기 우량채권</div></div>
+          </div>
+        </div>
+
+        <!-- 2 공격형 -->
+        <div class="use-case">
+          <div class="uc-h">
+            <span class="uc-no">2</span>
+            <span class="uc-t">공격형 투자자</span>
+            <span class="uc-d">위험자산 한도 70%를 채우고 채권혼합으로 한 번 더</span>
+            <span class="uc-badge on">반도체 <b>85%</b></span>
+          </div>
+          <div class="alloc">
+            <div class="brk etf r" style="width:30%"><span>ACE 채권혼합50 ETF &nbsp;30%</span></div>
+            <div class="brk risk" style="width:85%"><span>실제 반도체 투자 비중 85%</span></div>
+            <div class="abar">
+              <div class="seg s2" style="flex:35">ACE AI반도체TOP3+ &nbsp;35%</div>
+              <div class="seg s3" style="flex:35">ACE K반도체TOP2+ &nbsp;35%</div>
+              <div class="seg s1 sm" style="flex:15">반도체 15%</div>
+              <div class="seg sb sm" style="flex:15">채권 15%</div>
+              <div class="riskbox" style="width:85%"></div>
+            </div>
+            <div class="acap">
+              <div style="flex:35">삼성전자 25 · SK하이닉스 25 · 한미반도체 25</div>
+              <div style="flex:35">삼성전자 25 · SK하이닉스 25 · SK스퀘어 20 · 삼성전기 20</div>
+              <div style="flex:30">삼성전자 20 · SK하이닉스 20 · 삼성전기 10 · 채권 50</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 우: 종목별 실효 비중 -->
+      <div class="use-right">
+        <div class="ur-h">계좌 전체 기준 <b>종목별 실효 비중</b></div>
+        <table class="lt">
+          <thead><tr><th>국내 반도체 종목</th><th>안정형</th><th>공격형</th></tr></thead>
+          <tbody>
+            <tr><td>삼성전자</td><td>20.0%</td><td class="up">23.5%</td></tr>
+            <tr><td>SK하이닉스</td><td>20.0%</td><td class="up">23.5%</td></tr>
+            <tr><td>삼성전기</td><td>10.0%</td><td>10.0%</td></tr>
+            <tr><td>한미반도체</td><td class="na">–</td><td class="up">8.8%</td></tr>
+            <tr><td>SK스퀘어</td><td class="na">–</td><td class="up">7.0%</td></tr>
+            <tr><td>기타 반도체</td><td class="na">–</td><td class="up">12.3%</td></tr>
+            <tr class="sub"><td>대형주 5종 소계</td><td>50.0%</td><td class="up">72.8%</td></tr>
+            <tr class="tot"><td>반도체 합계</td><td>50.0%</td><td class="up">85.0%</td></tr>
+            <tr class="bond"><td>단기 우량채권</td><td>50.0%</td><td>15.0%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="keymsg">퇴직연금 한 계좌에서 반도체 비중을 50%부터 85%까지 설계</div>
+  <div class="src">* 각 상품 기초지수 방법론상 목표 비중 기준 예시(막대 아래 숫자는 ETF 내 종목 비중). 공격형은 주식형 70%를 두 상품에 균등 배분(각 35%) 가정. 실제 비중은 시장상황에 따라 변동.</div>
+  <div class="disc">※ 퇴직연금 계좌 내 투자 가능 여부 및 위험자산 한도는 관련 법령 및 판매회사 정책에 따라 달라질 수 있습니다. ※ 상기 자산배분 예시는 투자권유가 아닙니다.</div>
+  <div class="pageno">14</div>
+</section>
+
+<!-- =========================== 15p. 이런 투자자에게 적합합니다 =========================== -->
+<section class="slide" id="p15">
   <img class="logo" src="data:image/png;base64,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" alt="ACE ETF">
   <div class="cat">ACE 삼성전자SK하이닉스플러스채권혼합50</div>
   <h1 class="title">이런 투자자에게 적합합니다</h1>
@@ -957,7 +1120,7 @@ table.m tr:last-child td{border-bottom:0}
 
   <div class="keymsg">반도체 투자 비중은 높이고 싶지만 변동성은 낮추고 싶은 투자자를 위한 채권혼합 솔루션</div>
   <div class="disc" style="top:836px">※ 퇴직연금 계좌 내 투자 가능 여부 및 한도는 관련 법령 및 판매회사 정책에 따라 달라질 수 있습니다.<br>※ 분배금은 발생 및 금액이 고정적이지 않으며, 분배금 지급과는 별도로 보유자산이 하락할 경우 원금손실이 발생할 수 있습니다.</div>
-  <div class="pageno">14</div>
+  <div class="pageno">15</div>
 </section>
 
 </div><!-- /deck -->
